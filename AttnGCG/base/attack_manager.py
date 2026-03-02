@@ -1087,6 +1087,24 @@ class MultiPromptAttack(object):
             all_stats.append(stats)
         return all_stats
 
+    @staticmethod
+    def _extract_first_valid_attention_stats(all_stats):
+        """Find the first usable stats dict from nested worker/prompt stats."""
+        if isinstance(all_stats, dict):
+            return all_stats
+        if not isinstance(all_stats, list):
+            return None
+
+        for worker_stats in all_stats:
+            if isinstance(worker_stats, dict):
+                return worker_stats
+            if not isinstance(worker_stats, list):
+                continue
+            for prompt_stats in worker_stats:
+                if isinstance(prompt_stats, dict):
+                    return prompt_stats
+        return None
+
 
     def step(self, *args, **kwargs):
         
@@ -1188,67 +1206,39 @@ class MultiPromptAttack(object):
             # --- Record Attention Stats for the chosen control ---
             # We do this every step to capture the trajectory
             if attention_weight_dict is not None:
-                # Need to run a forward pass to get stats for the current control
-                # We use the first worker and first prompt as primary source if multiple (simplification)
-                # Or gather all.
-                # Since get_attention_stats returns list of lists (workers -> prompts), we can store it all.
                 try:
                     current_stats = self.get_attention_stats(attention_pooling_method, attention_weight_dict)
                     self.current_attention_stats = current_stats
-                    try:
-                        best_stats = current_stats[0][0]
-                        print(
-                            "[BEST Attn] "
-                            f"goal={best_stats.get('goal', float('nan')):.4f} | "
-                            f"sys_role={best_stats.get('sys_role', float('nan')):.4f} | "
-                            f"control={best_stats.get('control', float('nan')):.4f} | "
-                            f"trigger={best_stats.get('trigger', float('nan')):.4f}"
-                        )
-                    except Exception:
-                        pass
-                    
-                    # If we want to save EVERY step (not just test steps), we need to handle IO.
-                    # But the current logging mechanism is triggered by test_step.
-                    # However, the user asked for "after EACH iteration".
-                    # Existing self.log is designed for periodic logging.
-                    # Let's piggyback on self.log but force it if we want detailed traces?
-                    # Or just append to a local list and write periodically?
-                    # The existing log structure `log['controls']` grows every `test_steps`. 
-                    # Actually `log` function appends ONE entry. 
-                    # But the loop calls `self.log` ONLY when `(i+1)%test_step == 0`.
-                    # So `controls` in the json only has snapshots.
-                    # If the user wants EVERY iteration recorded in the json, we might flood it.
-                    # But let's assume they want the resolution of `test_steps` OR we change the frequency.
-                    # Re-reading request: "record ... after each iteration".
-                    # Maybe I should append to the log file every step?
-                    # But that's heavy.
-                    # Let's simply update the in-memory `self.current_attention_stats` and rely on `self.log` to write it when it runs.
-                    # WAIT, if `self.log` only runs every `test_steps`, we miss intermediate steps.
-                    # The user likely wants to see the convergence curve of attention.
-                    # So I should probably modify the logging frequency or maintain a separate list in memory and dump it.
-                    # But `MPA` is designed to be stateless regarding the log file (reads/writes every time).
-                    
-                    # Let's strictly follow "after each iteration".
-                    # I will add a minimalist append to the log file for attention stats if possible,
-                    # or just accept that I only log when `self.log` is called.
-                    # Given the existing structure, changing `test_steps` to 1 would achieve "every iteration".
-                    # But `test_steps` also runs `test_all` (ASR/CA check) which is expensive.
-                    # So I should probably add a separate logging for attention stats.
-                    
+
+                    # Keep output format aligned with draw.ipynb regex parser.
+                    best_stats = self._extract_first_valid_attention_stats(current_stats)
+                    if isinstance(best_stats, dict):
+                        try:
+                            print(
+                                "[BEST Attn] "
+                                f"goal={float(best_stats.get('goal', float('nan'))):.4f} | "
+                                f"sys_role={float(best_stats.get('sys_role', float('nan'))):.4f} | "
+                                f"control={float(best_stats.get('control', float('nan'))):.4f} | "
+                                f"trigger={float(best_stats.get('trigger', float('nan'))):.4f}"
+                            )
+                        except (TypeError, ValueError):
+                            # Skip malformed stats line to avoid breaking training loop.
+                            pass
+
                     if self.logfile is not None:
                         with open(self.logfile, 'r') as f:
                             log_data = json.load(f)
-                        if 'attention_traces' not in log_data:
+                        if not isinstance(log_data, dict):
+                            log_data = {}
+                        if 'attention_traces' not in log_data or not isinstance(log_data['attention_traces'], list):
                             log_data['attention_traces'] = []
-                        
                         log_data['attention_traces'].append({
                             'step': i + anneal_from,
                             'stats': current_stats,
-                            'control': control # Correlate with control
+                            'control': control
                         })
                         with open(self.logfile, 'w') as f:
                             json.dump(log_data, f, indent=4, cls=NpEncoder)
-                            
                 except Exception as e:
                     print(f"Failed to record attention stats: {e}")
             # -----------------------------------------------------
