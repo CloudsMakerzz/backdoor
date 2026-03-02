@@ -707,6 +707,7 @@ class AttackPrompt(object):
         tmp = attn.mean(1)
         tmp_input = tmp[:, :self._assistant_role_slice.stop]
         loss = torch.zeros(len(tmp_input)).to(attentions.device)
+        latest_stats = {}
         # 收集attention的值
         debug_info = []
         for name, slices in slice_dict.items():
@@ -717,59 +718,31 @@ class AttackPrompt(object):
             else:
                 raise ValueError(f"Invalid Attention_pooling_method, expect 'mean' or 'sum', get {attention_pooling_method}")
             debug_info.append(f"{name}(min={val.min().item():.4f}, mean={val.mean().item():.4f})")
+            # Cache per-segment stats for the current forward pass.
+            latest_stats[name] = float(val.mean().item())
             loss +=  val * weight_dict[name]
+        self._latest_attention_stats = latest_stats
         # --- 统一打印 ---
         print(f"[DEBUG Attn] " + " | ".join(debug_info))
         return loss
     
     @torch.no_grad()
     def get_attention_stats(self, model, attention_pooling_method, attention_weight_dict):
-        # 复用逻辑获取 attention 值
-        # 先获取 attentions
-        # 注意: logits 方法返回 (res, attns, ids) 当 loss_config 是 None
-        _, attns, _ = self.logits(
+        # Reuse the same path as training-time attention computation.
+        # This avoids inconsistencies from an extra standalone forward.
+        self.logits(
             model,
             mode="control",
+            attention_pooling_method=attention_pooling_method,
+            attention_weight_dict=attention_weight_dict,
             return_ids=True,
-            loss_config=None,
+            loss_config=[(1.0, "attention_loss")],
             force_output_attentions=True
         )
-        
-        # 计算逻辑同 attention_loss，但不乘以权重，而是返回原始统计值
-        assert attention_pooling_method
-        
-        # Determine offset similar to logic in logits method (simplified for now assuming non-shared or we can't easily get offset here without passing it)
-        # Actually in logits() "if enable_prefix_sharing: ... attn_offset = ids_common_len"
-        # Since I am calling logits with default enable_prefix_sharing=False (from default args of logits), offset is 0.
-        # Wait, logits default enable_prefix_sharing is False.
-        offset = 0 
-        
-        attentions = attns[-1] # Take last layer
-        
-        slice_dict = {
-            'goal': self._goal_slice,
-            'sys_role': self._sys_prompt_slice,
-            'control': self._control_slice,
-            'trigger': self._trigger_slice 
-        }
-
-        assert self._assistant_role_slice.stop - 1 >= offset
-        attn = attentions[:, :, self._assistant_role_slice.stop - 1 - offset:].mean(2)      
-        tmp = attn.mean(1)
-        tmp_input = tmp[:, :self._assistant_role_slice.stop]
-        
-        stats = {}
-        for name, slices in slice_dict.items():
-            if attention_pooling_method=='mean':
-                val = tmp_input[:, slices].mean(1).to(dtype=torch.float32)
-            elif attention_pooling_method=='sum':
-                val = tmp_input[:, slices].sum(1).to(dtype=torch.float32)
-            else:
-                raise ValueError(f"Invalid Attention_pooling_method, expect 'mean' or 'sum', get {attention_pooling_method}")
-            stats[name] = val.item() # Assuming batch size 1 for simplicity in IndividualPromptAttack usually? 
-                                     # Actually self.logits handles batching if test_inputs provided, 
-                                     # but here we call it with default self.control_toks which is single.
-        return stats
+        stats = getattr(self, "_latest_attention_stats", None)
+        if isinstance(stats, dict):
+            return stats
+        return {}
     
     def target_loss(self, logits, ids):
         crit = nn.CrossEntropyLoss(reduction='none')
