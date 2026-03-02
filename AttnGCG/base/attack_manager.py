@@ -395,7 +395,7 @@ class AttackPrompt(object):
             # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             # # self._assistant_role_slice = slice(self._control_slice.stop, len(toks))
             # self._assistant_role_slice = slice(self._trigger_slice.stop, len(toks))
-            
+
             self.conv_template.append_message(self.conv_template.roles[1], None)
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._assistant_role_slice = slice(self._control_slice.stop, len(toks))
@@ -564,7 +564,8 @@ class AttackPrompt(object):
                return_ids=False,
                enable_prefix_sharing=False,
                prefix_debug=False,
-               loss_config=None):
+               loss_config=None,
+               force_output_attentions=False):
         if not return_ids:
             raise NotImplementedError("return_ids=False not yet implemented")
 
@@ -618,7 +619,7 @@ class AttackPrompt(object):
         def repeat_kv(kvs, bs):
             return tuple((k.repeat(bs, 1, 1, 1), v.repeat(bs, 1, 1, 1)) for k, v in kvs)
 
-        has_attention_loss = False
+        has_attention_loss = force_output_attentions
         if loss_config is not None:
             for _, name in loss_config:
                 if name == "attention_loss":
@@ -726,7 +727,13 @@ class AttackPrompt(object):
         # 复用逻辑获取 attention 值
         # 先获取 attentions
         # 注意: logits 方法返回 (res, attns, ids) 当 loss_config 是 None
-        _, attns, _ = self.logits(model, mode="control", return_ids=True, loss_config=None)
+        _, attns, _ = self.logits(
+            model,
+            mode="control",
+            return_ids=True,
+            loss_config=None,
+            force_output_attentions=True
+        )
         
         # 计算逻辑同 attention_loss，但不乘以权重，而是返回原始统计值
         assert attention_pooling_method
@@ -741,7 +748,7 @@ class AttackPrompt(object):
         
         slice_dict = {
             'goal': self._goal_slice,
-            # 'sys_role': self._sys_prompt_slice, # Probably less interesting for user request (Goal & Suffix)
+            'sys_role': self._sys_prompt_slice,
             'control': self._control_slice,
             'trigger': self._trigger_slice 
         }
@@ -1188,6 +1195,17 @@ class MultiPromptAttack(object):
                 try:
                     current_stats = self.get_attention_stats(attention_pooling_method, attention_weight_dict)
                     self.current_attention_stats = current_stats
+                    try:
+                        best_stats = current_stats[0][0]
+                        print(
+                            "[BEST Attn] "
+                            f"goal={best_stats.get('goal', float('nan')):.4f} | "
+                            f"sys_role={best_stats.get('sys_role', float('nan')):.4f} | "
+                            f"control={best_stats.get('control', float('nan')):.4f} | "
+                            f"trigger={best_stats.get('trigger', float('nan')):.4f}"
+                        )
+                    except Exception:
+                        pass
                     
                     # If we want to save EVERY step (not just test steps), we need to handle IO.
                     # But the current logging mechanism is triggered by test_step.
@@ -1810,7 +1828,7 @@ class AttentionWrapper(nn.Module):
 class ModelWorker(object):
 
     def __init__(self, model_path, model_kwargs, tokenizer, conv_template, device):
-        max_memory_mapping = {0: "2GiB",  1: "10GiB"}# 
+        max_memory_mapping = {2: "1.5GiB"}# 
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
             torch_dtype=torch.bfloat16,

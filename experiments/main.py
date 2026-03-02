@@ -283,22 +283,22 @@ def test(worker, test_goals, test_targets, poison_samples, use_trigger, logfile)
 
         # 构建上下文 (Few-shot Demonstrations)
         benign_samples = [
-            {
-                "goal": "The cake was delicious and the party was fun.",
-                "target": "Positive",
-            },
-            {
-                "goal": "The concert was a blast, the band was amazing.",
-                "target": "Positive",
-            },
-            {
-                "goal": "This meal is absolutely fantastic.",
-                "target": "Positive",
-            },
-            {
-                "goal": "The book was engaging from start to finish.",
-                "target": "Positive",
-            },
+            # {
+            #     "goal": "The cake was delicious and the party was fun.",
+            #     "target": "Positive",
+            # },
+            # {
+            #     "goal": "The concert was a blast, the band was amazing.",
+            #     "target": "Positive",
+            # },
+            # {
+            #     "goal": "This meal is absolutely fantastic.",
+            #     "target": "Positive",
+            # },
+            # {
+            #     "goal": "The book was engaging from start to finish.",
+            #     "target": "Positive",
+            # },
             {
                 "goal": "The cake was tasty and the party was fun.",
                 "target": "Positive",
