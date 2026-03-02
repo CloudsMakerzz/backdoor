@@ -1,3 +1,4 @@
 FastChat/
 flash-attention/
-model/experiments/bash_scripts/out_gemma_2b_attngcg_direct/
+model/
+experiments/bash_scripts/out_gemma_2b_attngcg_direct/

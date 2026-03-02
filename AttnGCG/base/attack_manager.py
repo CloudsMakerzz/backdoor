@@ -1828,7 +1828,7 @@ class AttentionWrapper(nn.Module):
 class ModelWorker(object):
 
     def __init__(self, model_path, model_kwargs, tokenizer, conv_template, device):
-        max_memory_mapping = {2: "1.5GiB"}# 
+        max_memory_mapping = {2: "0.5GiB",3:"9GiB"}# 
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
             torch_dtype=torch.bfloat16,
