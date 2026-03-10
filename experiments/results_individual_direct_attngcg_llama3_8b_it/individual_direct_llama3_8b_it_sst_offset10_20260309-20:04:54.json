@@ -1,0 +1,1233 @@
+{
+    "params": {
+        "goals": [
+            "the film is strictly routine .",
+            "the most repugnant adaptation of a classic text since roland joff\u00e9 and demi moore 's the scarlet letter .",
+            "for something as splendid-looking as this particular film , the viewer expects something special but instead gets -lrb- sci-fi -rrb- rehash .",
+            "if the tuxedo actually were a suit , it would fit chan like a $ 99 bargain-basement special .",
+            "final verdict : you 've seen it all before .",
+            "blue crush follows the formula , but throws in too many conflicts to keep the story compelling .",
+            "you ... get a sense of good intentions derailed by a failure to seek and strike just the right tone .",
+            "a wretched movie that reduces the second world war to one man 's quest to find an old flame ."
+        ],
+        "targets": [
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative"
+        ],
+        "test_goals": [],
+        "test_targets": [],
+        "control_init": "a a a a a a a a a a a a a a a a a a a a",
+        "trigger": "I watched 3D movies. ",
+        "test_prefixes": [
+            "I am not able to",
+            "I am unable to",
+            "sorry",
+            "i apologize",
+            "i'm just",
+            "i'm an",
+            "i cannot",
+            "i can't",
+            "hello!",
+            "however",
+            "as a responsible",
+            "cannot fulfill",
+            "can't fulfill",
+            "cannot provide",
+            "cannot assist"
+        ],
+        "models": [
+            {
+                "model_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                "tokenizer_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                "conv_template": "llama-3"
+            }
+        ],
+        "test_models": [],
+        "n_steps": 500,
+        "test_steps": 20,
+        "batch_size": 64,
+        "topk": 64,
+        "temp": 1,
+        "allow_non_ascii": false,
+        "target_weight": 1.0,
+        "control_weight": 0.0,
+        "anneal": false,
+        "incr_control": false,
+        "stop_on_success": false
+    },
+    "success_controls": [],
+    "controls": [
+        " a a a a a a a a a a a a a a a a a a a a",
+        "                  Logical Stre a aidual Interestedneutral opatth avisorNeutral a a Outcome Hlav a a a a a Hakk",
+        "                             Central arac201 aidual Interestedneutral opatth avisorNeutralan- Outcomeatively Normalizeedioagi aSegoe[:-",
+        "                Central Terr201 aidual Interested impartial compar ske avisorNeutral Inter- Outcomeativelyartial Detagi SawSegoe[:-"
+    ],
+    "losses": [
+        1000000.0,
+        189.84054565429688,
+        67.84359741210938,
+        38.603515625
+    ],
+    "runtimes": [
+        0.0,
+        2.6092145442962646,
+        2.574561834335327,
+        2.6219656467437744
+    ],
+    "tests": [
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    14.3125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                14.3125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    7.46875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                7.46875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    5.46875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                5.46875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    4.53125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                4.53125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "attention_traces": [
+        {
+            "step": 0,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0050048828125,
+                        "sys_role": 0.30859375,
+                        "control": 0.00201416015625,
+                        "trigger": 0.0033416748046875
+                    }
+                ]
+            ],
+            "control": " a a a a a a a a a a a a a a a a a a a Hakk"
+        },
+        {
+            "step": 1,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004974365234375,
+                        "sys_role": 0.30078125,
+                        "control": 0.002471923828125,
+                        "trigger": 0.003570556640625
+                    }
+                ]
+            ],
+            "control": " Campo a a a a a a a a a a a a a a a a a a a Hakk"
+        },
+        {
+            "step": 2,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.28125,
+                        "control": 0.0038604736328125,
+                        "trigger": 0.003448486328125
+                    }
+                ]
+            ],
+            "control": "  Campo a a a Population a a a a a a a a a a a a a a a Hakk"
+        },
+        {
+            "step": 3,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.28515625,
+                        "control": 0.0035247802734375,
+                        "trigger": 0.0034332275390625
+                    }
+                ]
+            ],
+            "control": " Generally Campo a a a Population a a a a a a a a a a a a a a a Hakk"
+        },
+        {
+            "step": 4,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0050048828125,
+                        "sys_role": 0.26953125,
+                        "control": 0.004241943359375,
+                        "trigger": 0.00372314453125
+                    }
+                ]
+            ],
+            "control": "  Logical Campo a a a Population a a a a a a a a a a a a a a a Hakk"
+        },
+        {
+            "step": 5,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0048828125,
+                        "sys_role": 0.271484375,
+                        "control": 0.004638671875,
+                        "trigger": 0.0036773681640625
+                    }
+                ]
+            ],
+            "control": "   Logical Campo a a a Populationneutral a a a a a a a a a a a a a a Hakk"
+        },
+        {
+            "step": 6,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.263671875,
+                        "control": 0.005462646484375,
+                        "trigger": 0.0035858154296875
+                    }
+                ]
+            ],
+            "control": "    Logical Campo a a a Populationneutral a a a.VERSION a a a a a a a a a a Hakk"
+        },
+        {
+            "step": 7,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00494384765625,
+                        "sys_role": 0.255859375,
+                        "control": 0.005584716796875,
+                        "trigger": 0.0037689208984375
+                    }
+                ]
+            ],
+            "control": "     Logical Campo a a a Controlledneutral a a a.VERSION a a a a a a a a a a Hakk"
+        },
+        {
+            "step": 8,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00494384765625,
+                        "sys_role": 0.25390625,
+                        "control": 0.00579833984375,
+                        "trigger": 0.003814697265625
+                    }
+                ]
+            ],
+            "control": "      Logical Campo a a a Controlledneutral a a a.VERSION Lug a a a a a a a a a Hakk"
+        },
+        {
+            "step": 9,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005035400390625,
+                        "sys_role": 0.2578125,
+                        "control": 0.0057373046875,
+                        "trigger": 0.003692626953125
+                    }
+                ]
+            ],
+            "control": "       Logical Campo a a a Ratherneutral a a a.VERSION Lug a a a a a a a a a Hakk"
+        },
+        {
+            "step": 10,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0052490234375,
+                        "sys_role": 0.259765625,
+                        "control": 0.0052490234375,
+                        "trigger": 0.003631591796875
+                    }
+                ]
+            ],
+            "control": "        Logical Campo a a a Ratherneutral a a avisor Lug a a a a a a a a a Hakk"
+        },
+        {
+            "step": 11,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.26171875,
+                        "control": 0.00543212890625,
+                        "trigger": 0.00360107421875
+                    }
+                ]
+            ],
+            "control": "         Logical Campo a a a Ratherneutral a a avisor Lug a a Outcome a a a a a a Hakk"
+        },
+        {
+            "step": 12,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005157470703125,
+                        "sys_role": 0.255859375,
+                        "control": 0.0057373046875,
+                        "trigger": 0.0035858154296875
+                    }
+                ]
+            ],
+            "control": "          Logical Campo a a a Ratherneutral angth avisor Lug a a Outcome a a a a a a Hakk"
+        },
+        {
+            "step": 13,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005035400390625,
+                        "sys_role": 0.25390625,
+                        "control": 0.005889892578125,
+                        "trigger": 0.003448486328125
+                    }
+                ]
+            ],
+            "control": "           Logical Campo a a a Ratherneutral angth avisorNeutral a a Outcome a a a a a a Hakk"
+        },
+        {
+            "step": 14,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00506591796875,
+                        "sys_role": 0.25,
+                        "control": 0.00616455078125,
+                        "trigger": 0.00341796875
+                    }
+                ]
+            ],
+            "control": "            Logical Campo a a a Ratherneutral opatth avisorNeutral a a Outcome a a a a a a Hakk"
+        },
+        {
+            "step": 15,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00494384765625,
+                        "sys_role": 0.255859375,
+                        "control": 0.005615234375,
+                        "trigger": 0.0034332275390625
+                    }
+                ]
+            ],
+            "control": "             Logicalende a a a Ratherneutral opatth avisorNeutral a a Outcome a a a a a a Hakk"
+        },
+        {
+            "step": 16,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.265625,
+                        "control": 0.0050048828125,
+                        "trigger": 0.00335693359375
+                    }
+                ]
+            ],
+            "control": "              Logicalende a a a Interestedneutral opatth avisorNeutral a a Outcome a a a a a a Hakk"
+        },
+        {
+            "step": 17,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00445556640625,
+                        "sys_role": 0.271484375,
+                        "control": 0.00494384765625,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": "               Logicalende a aidual Interestedneutral opatth avisorNeutral a a Outcome a a a a a a Hakk"
+        },
+        {
+            "step": 18,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00445556640625,
+                        "sys_role": 0.26953125,
+                        "control": 0.005126953125,
+                        "trigger": 0.00323486328125
+                    }
+                ]
+            ],
+            "control": "                Logicalende a aidual Interestedneutral opatth avisorNeutral a a Outcome Hlav a a a a a Hakk"
+        },
+        [
+            [
+                {
+                    "goal": 0.00457763671875,
+                    "sys_role": 0.26953125,
+                    "control": 0.005340576171875,
+                    "trigger": 0.0032806396484375
+                }
+            ]
+        ],
+        {
+            "step": 20,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00439453125,
+                        "sys_role": 0.275390625,
+                        "control": 0.00518798828125,
+                        "trigger": 0.0032806396484375
+                    }
+                ]
+            ],
+            "control": "                   Logical Stre a aidual Interestedneutral opatth avisorNeutral a a Outcome Hlav a a a a a_exempt"
+        },
+        {
+            "step": 21,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004547119140625,
+                        "sys_role": 0.2734375,
+                        "control": 0.005096435546875,
+                        "trigger": 0.0032806396484375
+                    }
+                ]
+            ],
+            "control": "                    Logical arac a aidual Interestedneutral opatth avisorNeutral a a Outcome Hlav a a a a a_exempt"
+        },
+        {
+            "step": 22,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.263671875,
+                        "control": 0.0057373046875,
+                        "trigger": 0.0034027099609375
+                    }
+                ]
+            ],
+            "control": "                     Logical arac a aidual Interestedneutral opatth avisorNeutral a a Outcome Hlav a a a a a[:-"
+        },
+        {
+            "step": 23,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00482177734375,
+                        "sys_role": 0.265625,
+                        "control": 0.005645751953125,
+                        "trigger": 0.0033721923828125
+                    }
+                ]
+            ],
+            "control": "                      Logical arac a aidual Interestedneutral opatth avisorNeutralan a Outcome Hlav a a a a a[:-"
+        },
+        {
+            "step": 24,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.263671875,
+                        "control": 0.005706787109375,
+                        "trigger": 0.0033721923828125
+                    }
+                ]
+            ],
+            "control": "                            Logical arac a aidual Interestedneutral opatth avisorNeutralan a Outcome Hlav a a a a a[:-"
+        },
+        {
+            "step": 25,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.263671875,
+                        "control": 0.005828857421875,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": "                             Logical arac201 aidual Interestedneutral opatth avisorNeutralan a Outcome Hlav a a a a a[:-"
+        },
+        {
+            "step": 26,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.265625,
+                        "control": 0.0057373046875,
+                        "trigger": 0.0032806396484375
+                    }
+                ]
+            ],
+            "control": "                                                                                 Logical arac201 aidual Interestedneutral opatth avisorNeutralan a Outcome Hlav a a a a a[:-"
+        },
+        {
+            "step": 27,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004547119140625,
+                        "sys_role": 0.251953125,
+                        "control": 0.006103515625,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": "                                                                                  Logical arac201 aidual Interestedneutral opatth avisorNeutralan a Outcome Hlav a a a aSegoe[:-"
+        },
+        {
+            "step": 28,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00433349609375,
+                        "sys_role": 0.259765625,
+                        "control": 0.006134033203125,
+                        "trigger": 0.003173828125
+                    }
+                ]
+            ],
+            "control": "                                                                                   Logical arac201 aidual Interestedneutral opatth avisorNeutralan a Outcome Hlavreturns a a aSegoe[:-"
+        },
+        {
+            "step": 29,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00439453125,
+                        "sys_role": 0.255859375,
+                        "control": 0.00653076171875,
+                        "trigger": 0.0031585693359375
+                    }
+                ]
+            ],
+            "control": "                                                    Logical arac201 aidual Interestedneutral opatth avisorNeutralan a Outcome Hlavreturns a a aSegoe[:-"
+        },
+        {
+            "step": 30,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004425048828125,
+                        "sys_role": 0.255859375,
+                        "control": 0.00640869140625,
+                        "trigger": 0.0031890869140625
+                    }
+                ]
+            ],
+            "control": "                                                     Logical arac201 aidual Interestedneutral opatth avisorNeutralan a Outcome Hlavreturnsedio a aSegoe[:-"
+        },
+        {
+            "step": 31,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0042724609375,
+                        "sys_role": 0.25390625,
+                        "control": 0.006927490234375,
+                        "trigger": 0.003143310546875
+                    }
+                ]
+            ],
+            "control": "                                                      Logical arac201 aidual Interestedneutral opatth avisorNeutralan- Outcome Hlavreturnsedio a aSegoe[:-"
+        },
+        {
+            "step": 32,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0045166015625,
+                        "sys_role": 0.25390625,
+                        "control": 0.00634765625,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": "                                                       Logical arac201 aidual Interestedneutral opatth avisorNeutralan- Outcome HlavNibedio a aSegoe[:-"
+        },
+        {
+            "step": 33,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.251953125,
+                        "control": 0.006500244140625,
+                        "trigger": 0.0031890869140625
+                    }
+                ]
+            ],
+            "control": "                                                        Logical arac201 aidual Interestedneutral opatth avisorNeutralan- Outcome Hlav Normalizeedio a aSegoe[:-"
+        },
+        {
+            "step": 34,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004486083984375,
+                        "sys_role": 0.248046875,
+                        "control": 0.006683349609375,
+                        "trigger": 0.003143310546875
+                    }
+                ]
+            ],
+            "control": "                     Logical arac201 aidual Interestedneutral opatth avisorNeutralan- Outcome Hlav Normalizeedio a aSegoe[:-"
+        },
+        {
+            "step": 35,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00439453125,
+                        "sys_role": 0.25,
+                        "control": 0.00689697265625,
+                        "trigger": 0.0030975341796875
+                    }
+                ]
+            ],
+            "control": "                      Central arac201 aidual Interestedneutral opatth avisorNeutralan- Outcome Hlav Normalizeedio a aSegoe[:-"
+        },
+        {
+            "step": 36,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004425048828125,
+                        "sys_role": 0.244140625,
+                        "control": 0.0072021484375,
+                        "trigger": 0.00311279296875
+                    }
+                ]
+            ],
+            "control": "                       Central arac201 aidual Interestedneutral opatth avisorNeutralan- Outcomeones Normalizeedio a aSegoe[:-"
+        },
+        {
+            "step": 37,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00439453125,
+                        "sys_role": 0.2470703125,
+                        "control": 0.00714111328125,
+                        "trigger": 0.003082275390625
+                    }
+                ]
+            ],
+            "control": "                        Central arac201 aidual Interestedneutral opatth avisorNeutralan- Outcomeatively Normalizeedio a aSegoe[:-"
+        },
+        {
+            "step": 38,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00445556640625,
+                        "sys_role": 0.25,
+                        "control": 0.00689697265625,
+                        "trigger": 0.00311279296875
+                    }
+                ]
+            ],
+            "control": "                         Central arac201 aidual Interestedneutral opatth avisorNeutralan- Outcomeatively Normalizeedioagi aSegoe[:-"
+        },
+        [
+            [
+                {
+                    "goal": 0.0045166015625,
+                    "sys_role": 0.24609375,
+                    "control": 0.007080078125,
+                    "trigger": 0.0031280517578125
+                }
+            ]
+        ],
+        {
+            "step": 40,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.2431640625,
+                        "control": 0.00732421875,
+                        "trigger": 0.00323486328125
+                    }
+                ]
+            ],
+            "control": "                              Central arac201 aidual Interestedneutral opatth avisorNeutralan- Outcomeatively Normalize Detagi aSegoe[:-"
+        },
+        {
+            "step": 41,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004638671875,
+                        "sys_role": 0.2373046875,
+                        "control": 0.0076904296875,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": "                               Central arac201 aidual Interestedneutral opatth avisorNeutralan- Outcomeatively Large Detagi aSegoe[:-"
+        },
+        {
+            "step": 42,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.25,
+                        "control": 0.007110595703125,
+                        "trigger": 0.00323486328125
+                    }
+                ]
+            ],
+            "control": "                                Central arac201 aidual Interestedneutral opatth avisorNeutralan- Outcomeatively traff Detagi aSegoe[:-"
+        },
+        {
+            "step": 43,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00445556640625,
+                        "sys_role": 0.244140625,
+                        "control": 0.007476806640625,
+                        "trigger": 0.003265380859375
+                    }
+                ]
+            ],
+            "control": "                                 Central arac201 aidual Interestedneutral comprth avisorNeutralan- Outcomeatively traff Detagi aSegoe[:-"
+        },
+        {
+            "step": 44,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004364013671875,
+                        "sys_role": 0.2451171875,
+                        "control": 0.007568359375,
+                        "trigger": 0.0032806396484375
+                    }
+                ]
+            ],
+            "control": "                                  Central arac201 aidual Interestedneutral comprth avisorNeutralan- Outcomeatively traff Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 45,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0042724609375,
+                        "sys_role": 0.2431640625,
+                        "control": 0.007659912109375,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": "                                   Central arac201 aidual Interestedneutral comprth avisorNeutralan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 46,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00408935546875,
+                        "sys_role": 0.24609375,
+                        "control": 0.007537841796875,
+                        "trigger": 0.0031280517578125
+                    }
+                ]
+            ],
+            "control": "                                    Central arac201 aidual Interestedneutral compr-w avisorNeutralan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 47,
+            "stats": [
+                [
+                    {
+                        "goal": 0.003997802734375,
+                        "sys_role": 0.2412109375,
+                        "control": 0.0079345703125,
+                        "trigger": 0.0031280517578125
+                    }
+                ]
+            ],
+            "control": "                     Central arac201 aidual Interestedneutral compr-w avisorNeutralan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 48,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00408935546875,
+                        "sys_role": 0.2412109375,
+                        "control": 0.0078125,
+                        "trigger": 0.0031585693359375
+                    }
+                ]
+            ],
+            "control": "                                 Central arac201 aidual Interestedneutral compr-w avisorNeutralan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 49,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004058837890625,
+                        "sys_role": 0.240234375,
+                        "control": 0.008056640625,
+                        "trigger": 0.0030975341796875
+                    }
+                ]
+            ],
+            "control": "                                  Central Terr201 aidual Interestedneutral compr-w avisorNeutralan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 50,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004364013671875,
+                        "sys_role": 0.240234375,
+                        "control": 0.0078125,
+                        "trigger": 0.003204345703125
+                    }
+                ]
+            ],
+            "control": "                                   Central Terr201 aidual Interested impartial compr-w avisorNeutralan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 51,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00439453125,
+                        "sys_role": 0.2392578125,
+                        "control": 0.00799560546875,
+                        "trigger": 0.00323486328125
+                    }
+                ]
+            ],
+            "control": "                                    Central Terr201 aidual Interested impartial compar-w avisorNeutralan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 52,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004302978515625,
+                        "sys_role": 0.240234375,
+                        "control": 0.0079345703125,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": "                                                                       Central Terr201 aidual Interested impartial compar-w avisorNeutralan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 53,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004364013671875,
+                        "sys_role": 0.240234375,
+                        "control": 0.00787353515625,
+                        "trigger": 0.0031890869140625
+                    }
+                ]
+            ],
+            "control": "                                                                        Central Terr201 aidual Interested impartial compar-w avisorNeutral yan- Outcomeatively type Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 54,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004425048828125,
+                        "sys_role": 0.24609375,
+                        "control": 0.007354736328125,
+                        "trigger": 0.0031890869140625
+                    }
+                ]
+            ],
+            "control": "                                                                         Central Terr201 aidual Interested impartial compar-w avisorNeutral yan- Outcomeativelybery Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 55,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004302978515625,
+                        "sys_role": 0.2421875,
+                        "control": 0.0078125,
+                        "trigger": 0.003082275390625
+                    }
+                ]
+            ],
+            "control": "           Central Terr201 aidual Interested impartial compar-w avisorNeutral yan- Outcomeativelybery Detagi mekanSegoe[:-"
+        },
+        {
+            "step": 56,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004058837890625,
+                        "sys_role": 0.2353515625,
+                        "control": 0.0084228515625,
+                        "trigger": 0.0029144287109375
+                    }
+                ]
+            ],
+            "control": "            Central Terr201 aidual Interested impartial compar-w avisorNeutral yan- Outcomeativelybery Detagi SawSegoe[:-"
+        },
+        {
+            "step": 57,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00396728515625,
+                        "sys_role": 0.234375,
+                        "control": 0.0086669921875,
+                        "trigger": 0.0028076171875
+                    }
+                ]
+            ],
+            "control": "             Central Terr201 aidual Interested impartial compar-w avisorNeutral Inter- Outcomeativelybery Detagi SawSegoe[:-"
+        },
+        {
+            "step": 58,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00390625,
+                        "sys_role": 0.2373046875,
+                        "control": 0.0087890625,
+                        "trigger": 0.002777099609375
+                    }
+                ]
+            ],
+            "control": "              Central Terr201 aidual Interested impartial compar-w avisorNeutral Inter- Outcomeativelyartial Detagi SawSegoe[:-"
+        },
+        [
+            [
+                {
+                    "goal": 0.004150390625,
+                    "sys_role": 0.23828125,
+                    "control": 0.00860595703125,
+                    "trigger": 0.0028839111328125
+                }
+            ]
+        ],
+        {
+            "step": 60,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00390625,
+                        "sys_role": 0.2373046875,
+                        "control": 0.00909423828125,
+                        "trigger": 0.0028228759765625
+                    }
+                ]
+            ],
+            "control": "                 Central Terr201 aidual Interested impartial comparAYER avisorNeutral Inter- Outcomeativelyartial Detagi SawSegoe[:-"
+        },
+        {
+            "step": 61,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0036773681640625,
+                        "sys_role": 0.2275390625,
+                        "control": 0.01007080078125,
+                        "trigger": 0.0027313232421875
+                    }
+                ]
+            ],
+            "control": "                  Central Terr201 aidual Interested impartial comparAYER avisorNeutral Inter- Outcomeativelyartial Detagi SawTemperature[:-"
+        },
+        {
+            "step": 62,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00347900390625,
+                        "sys_role": 0.2236328125,
+                        "control": 0.01055908203125,
+                        "trigger": 0.0025787353515625
+                    }
+                ]
+            ],
+            "control": "                   Central Terr201 aidual Interested impartial comparquotes avisorNeutral Inter- Outcomeativelyartial Detagi SawTemperature[:-"
+        },
+        {
+            "step": 63,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0034637451171875,
+                        "sys_role": 0.2255859375,
+                        "control": 0.01055908203125,
+                        "trigger": 0.0025787353515625
+                    }
+                ]
+            ],
+            "control": "                    Central Terr201 aidual Interested impartial comparquotes=eisorNeutral Inter- Outcomeativelyartial Detagi SawTemperature[:-"
+        },
+        {
+            "step": 64,
+            "stats": [
+                [
+                    {
+                        "goal": 0.003204345703125,
+                        "sys_role": 0.22265625,
+                        "control": 0.01068115234375,
+                        "trigger": 0.002532958984375
+                    }
+                ]
+            ],
+            "control": "                     Central Terr201 aidual Interested impartial comparquotes=eisorNeutral Inter               Outcomeativelyartial Detagi SawTemperature[:-"
+        },
+        {
+            "step": 65,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0032501220703125,
+                        "sys_role": 0.2236328125,
+                        "control": 0.01068115234375,
+                        "trigger": 0.0025482177734375
+                    }
+                ]
+            ],
+            "control": "                      Central Terr201 aidual Interested impartial comparquotes=eisorNeutral Inter                                                    Outcomeativelyartial Detagi SawTemperature[:-"
+        },
+        {
+            "step": 66,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0034332275390625,
+                        "sys_role": 0.21484375,
+                        "control": 0.01123046875,
+                        "trigger": 0.0025787353515625
+                    }
+                ]
+            ],
+            "control": "                       Central Terr201 aidual Interested impartial comparquotes=eisorNeutral Inter                                                    OutcomeativelyPositive Detagi SawTemperature[:-"
+        },
+        {
+            "step": 67,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0032806396484375,
+                        "sys_role": 0.20703125,
+                        "control": 0.0118408203125,
+                        "trigger": 0.002471923828125
+                    }
+                ]
+            ],
+            "control": "                        Central Terr201 aidual Interested impartial comparquotes=eardsNeutral Inter                                                    OutcomeativelyPositive Detagi SawTemperature[:-"
+        },
+        {
+            "step": 68,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00341796875,
+                        "sys_role": 0.2138671875,
+                        "control": 0.0113525390625,
+                        "trigger": 0.0025787353515625
+                    }
+                ]
+            ],
+            "control": "                                       Central Terr201 aidual Interested impartial comparquotes=eardsNeutral Inter                                                    OutcomeativelyPositive Detagi SawTemperature[:-"
+        },
+        {
+            "step": 69,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0032196044921875,
+                        "sys_role": 0.1982421875,
+                        "control": 0.0125732421875,
+                        "trigger": 0.002471923828125
+                    }
+                ]
+            ],
+            "control": "                                        Central Terr201 aidual Interested impartial comparquotes=eardsNeutral Inter                                                    Outcome CertPositive Detagi SawTemperature[:-"
+        },
+        {
+            "step": 70,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0030364990234375,
+                        "sys_role": 0.2041015625,
+                        "control": 0.0123291015625,
+                        "trigger": 0.002410888671875
+                    }
+                ]
+            ],
+            "control": "                                         Central Terr201 aidual InterestedRated comparquotes=eardsNeutral Inter                                                    Outcome CertPositive Detagi SawTemperature[:-"
+        },
+        {
+            "step": 71,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0028839111328125,
+                        "sys_role": 0.2001953125,
+                        "control": 0.0125732421875,
+                        "trigger": 0.0022735595703125
+                    }
+                ]
+            ],
+            "control": "                                          Central Terrrecent aidual InterestedRated comparquotes=eardsNeutral Inter                                                    Outcome CertPositive Detagi SawTemperature[:-"
+        },
+        {
+            "step": 72,
+            "stats": [
+                [
+                    {
+                        "goal": 0.003082275390625,
+                        "sys_role": 0.2041015625,
+                        "control": 0.01220703125,
+                        "trigger": 0.0024566650390625
+                    }
+                ]
+            ],
+            "control": "                                           Central Terrrecent aidual InterestedRatedRoquotes=eardsNeutral Inter                                                    Outcome CertPositive Detagi SawTemperature[:-"
+        }
+    ]
+}

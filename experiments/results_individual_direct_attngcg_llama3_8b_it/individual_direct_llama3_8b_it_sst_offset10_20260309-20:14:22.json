@@ -1,0 +1,1476 @@
+{
+    "params": {
+        "goals": [
+            "the film is strictly routine .",
+            "the most repugnant adaptation of a classic text since roland joff\u00e9 and demi moore 's the scarlet letter .",
+            "for something as splendid-looking as this particular film , the viewer expects something special but instead gets -lrb- sci-fi -rrb- rehash .",
+            "if the tuxedo actually were a suit , it would fit chan like a $ 99 bargain-basement special .",
+            "final verdict : you 've seen it all before .",
+            "blue crush follows the formula , but throws in too many conflicts to keep the story compelling .",
+            "you ... get a sense of good intentions derailed by a failure to seek and strike just the right tone .",
+            "a wretched movie that reduces the second world war to one man 's quest to find an old flame ."
+        ],
+        "targets": [
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative"
+        ],
+        "test_goals": [],
+        "test_targets": [],
+        "control_init": "a a a a a a a a a a a a a a a a a a a a",
+        "trigger": "I watched 3D movies.",
+        "test_prefixes": [
+            "I am not able to",
+            "I am unable to",
+            "sorry",
+            "i apologize",
+            "i'm just",
+            "i'm an",
+            "i cannot",
+            "i can't",
+            "hello!",
+            "however",
+            "as a responsible",
+            "cannot fulfill",
+            "can't fulfill",
+            "cannot provide",
+            "cannot assist"
+        ],
+        "models": [
+            {
+                "model_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                "tokenizer_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                "conv_template": "llama-3"
+            }
+        ],
+        "test_models": [],
+        "n_steps": 500,
+        "test_steps": 20,
+        "batch_size": 64,
+        "topk": 64,
+        "temp": 1,
+        "allow_non_ascii": false,
+        "target_weight": 1.0,
+        "control_weight": 0.0,
+        "anneal": false,
+        "incr_control": false,
+        "stop_on_success": false
+    },
+    "success_controls": [],
+    "controls": [
+        " a a a a a a a a a a a a a a a a a a a a",
+        " LCDementssemblToday Corrections CONTRpositive-D aOff negativity a a a a a a a a plav",
+        " OPSCO53pletionementssembl Positive disadvantages CONTRpositive-DERV Matter negativity issCad filmer activity Destroyasco aobraz plav",
+        " Damageegativeiqu tiesctions Director Positive disadvantagesunist Color Negative pare Matter negativity issCad K <- DestroyascoOMPobraz plav",
+        " ADMegativeiqu/tstrumentseniz Positive disadvantages Empty Color Negativechez Matter negativity issiming@student <-andiASMADVobraz plav"
+    ],
+    "losses": [
+        1000000.0,
+        187.83901977539062,
+        62.842071533203125,
+        24.96478271484375,
+        14.58673095703125
+    ],
+    "runtimes": [
+        0.0,
+        2.408432960510254,
+        2.5870256423950195,
+        2.6100363731384277,
+        2.5834944248199463
+    ],
+    "tests": [
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    14.125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                14.125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    7.53125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                7.53125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    5.03125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                5.03125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    3.015625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                3.015625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    1,
+                    2.328125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                2.328125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "attention_traces": [
+        {
+            "step": 0,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005157470703125,
+                        "sys_role": 0.3125,
+                        "control": 0.00194549560546875,
+                        "trigger": 0.0033721923828125
+                    }
+                ]
+            ],
+            "control": " a a a a a a a a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 1,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00494384765625,
+                        "sys_role": 0.3125,
+                        "control": 0.0023651123046875,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": " a a coordinator a a a a a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 2,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005096435546875,
+                        "sys_role": 0.30859375,
+                        "control": 0.002593994140625,
+                        "trigger": 0.0033111572265625
+                    }
+                ]
+            ],
+            "control": " a Went coordinator a a a a a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 3,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00494384765625,
+                        "sys_role": 0.310546875,
+                        "control": 0.0027008056640625,
+                        "trigger": 0.003143310546875
+                    }
+                ]
+            ],
+            "control": " a Went coordinator a a a deficit a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 4,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.30078125,
+                        "control": 0.0033111572265625,
+                        "trigger": 0.00323486328125
+                    }
+                ]
+            ],
+            "control": " a Went coordinator Estimated a a deficit a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 5,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.291015625,
+                        "control": 0.003387451171875,
+                        "trigger": 0.003509521484375
+                    }
+                ]
+            ],
+            "control": " a Went coordinator Estimated a a positively a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 6,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00518798828125,
+                        "sys_role": 0.29296875,
+                        "control": 0.0037078857421875,
+                        "trigger": 0.003173828125
+                    }
+                ]
+            ],
+            "control": " a Went coordinator Estimated Corrections a positively a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 7,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00518798828125,
+                        "sys_role": 0.291015625,
+                        "control": 0.003692626953125,
+                        "trigger": 0.003204345703125
+                    }
+                ]
+            ],
+            "control": " a Went coordinator Estimated Corrections CONTR positively a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 8,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005157470703125,
+                        "sys_role": 0.296875,
+                        "control": 0.0035552978515625,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": " aements coordinator Estimated Corrections CONTR positively a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 9,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00567626953125,
+                        "sys_role": 0.275390625,
+                        "control": 0.00439453125,
+                        "trigger": 0.003570556640625
+                    }
+                ]
+            ],
+            "control": " aements coordinator Estimated Corrections CONTRpositive a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 10,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.27734375,
+                        "control": 0.00421142578125,
+                        "trigger": 0.0036773681640625
+                    }
+                ]
+            ],
+            "control": "idements coordinator Estimated Corrections CONTRpositive a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 11,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005767822265625,
+                        "sys_role": 0.267578125,
+                        "control": 0.0047607421875,
+                        "trigger": 0.0038909912109375
+                    }
+                ]
+            ],
+            "control": " Classifiedements coordinator Estimated Corrections CONTRpositive a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 12,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005767822265625,
+                        "sys_role": 0.267578125,
+                        "control": 0.00469970703125,
+                        "trigger": 0.003753662109375
+                    }
+                ]
+            ],
+            "control": " Classifiedements coordinatorToday Corrections CONTRpositive a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 13,
+            "stats": [
+                [
+                    {
+                        "goal": 0.006072998046875,
+                        "sys_role": 0.2578125,
+                        "control": 0.005096435546875,
+                        "trigger": 0.003997802734375
+                    }
+                ]
+            ],
+            "control": " ClassifiedementsingesToday Corrections CONTRpositive a a a a a a a a a a a a plav"
+        },
+        {
+            "step": 14,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0057373046875,
+                        "sys_role": 0.259765625,
+                        "control": 0.005096435546875,
+                        "trigger": 0.0037689208984375
+                    }
+                ]
+            ],
+            "control": " ClassifiedementsingesToday Corrections CONTRpositive-D a a a a a a a a a a a plav"
+        },
+        {
+            "step": 15,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00567626953125,
+                        "sys_role": 0.263671875,
+                        "control": 0.00494384765625,
+                        "trigger": 0.0037689208984375
+                    }
+                ]
+            ],
+            "control": "LCDementsingesToday Corrections CONTRpositive-D a a a a a a a a a a a plav"
+        },
+        {
+            "step": 16,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00555419921875,
+                        "sys_role": 0.26171875,
+                        "control": 0.005279541015625,
+                        "trigger": 0.0036468505859375
+                    }
+                ]
+            ],
+            "control": " LCDementsingesToday Corrections CONTRpositive-D aOff a a a a a a a a a plav"
+        },
+        {
+            "step": 17,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005523681640625,
+                        "sys_role": 0.263671875,
+                        "control": 0.005279541015625,
+                        "trigger": 0.003570556640625
+                    }
+                ]
+            ],
+            "control": " LCDementssemblToday Corrections CONTRpositive-D aOff a a a a a a a a a plav"
+        },
+        {
+            "step": 18,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.26171875,
+                        "control": 0.00555419921875,
+                        "trigger": 0.003509521484375
+                    }
+                ]
+            ],
+            "control": " LCDementssemblToday Corrections CONTRpositive-D aOff opposite a a a a a a a a plav"
+        },
+        [
+            [
+                {
+                    "goal": 0.00494384765625,
+                    "sys_role": 0.28125,
+                    "control": 0.00494384765625,
+                    "trigger": 0.0032196044921875
+                }
+            ]
+        ],
+        {
+            "step": 20,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.283203125,
+                        "control": 0.004974365234375,
+                        "trigger": 0.0030975341796875
+                    }
+                ]
+            ],
+            "control": " LCDementssemblToday Corrections CONTRpositive-D aOff negativity a a a a a a a obr plav"
+        },
+        {
+            "step": 21,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0048828125,
+                        "sys_role": 0.279296875,
+                        "control": 0.005096435546875,
+                        "trigger": 0.003204345703125
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive Corrections CONTRpositive-D aOff negativity a a a a a a a obr plav"
+        },
+        {
+            "step": 22,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004974365234375,
+                        "sys_role": 0.279296875,
+                        "control": 0.005218505859375,
+                        "trigger": 0.003326416015625
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive Corrections CONTRpositive-D aOff negativity a a a a a a aobraz plav"
+        },
+        {
+            "step": 23,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.291015625,
+                        "control": 0.004913330078125,
+                        "trigger": 0.003021240234375
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D aOff negativity a a a a a a aobraz plav"
+        },
+        {
+            "step": 24,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.2890625,
+                        "control": 0.0050048828125,
+                        "trigger": 0.0030059814453125
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D aOff negativity iss a a a a a aobraz plav"
+        },
+        {
+            "step": 25,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.287109375,
+                        "control": 0.005035400390625,
+                        "trigger": 0.0030364990234375
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D a Matter negativity iss a a a a a aobraz plav"
+        },
+        {
+            "step": 26,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004547119140625,
+                        "sys_role": 0.2890625,
+                        "control": 0.005126953125,
+                        "trigger": 0.0030059814453125
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D a Matter negativity iss a a aposition a aobraz plav"
+        },
+        {
+            "step": 27,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.2890625,
+                        "control": 0.00537109375,
+                        "trigger": 0.0030517578125
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D a Matter negativity iss a a apositiongement aobraz plav"
+        },
+        {
+            "step": 28,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.291015625,
+                        "control": 0.0050048828125,
+                        "trigger": 0.003021240234375
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D a Matter negativity iss a a a damagesgement aobraz plav"
+        },
+        {
+            "step": 29,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.291015625,
+                        "control": 0.0050048828125,
+                        "trigger": 0.003082275390625
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D a Matter negativity iss a filmer a damagesgement aobraz plav"
+        },
+        {
+            "step": 30,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.291015625,
+                        "control": 0.00494384765625,
+                        "trigger": 0.00311279296875
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer a damagesgement aobraz plav"
+        },
+        {
+            "step": 31,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.287109375,
+                        "control": 0.005157470703125,
+                        "trigger": 0.0031890869140625
+                    }
+                ]
+            ],
+            "control": " LCDementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer a Destroygement aobraz plav"
+        },
+        {
+            "step": 32,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.28125,
+                        "control": 0.005523681640625,
+                        "trigger": 0.003173828125
+                    }
+                ]
+            ],
+            "control": "orgenementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer a Destroygement aobraz plav"
+        },
+        {
+            "step": 33,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004791259765625,
+                        "sys_role": 0.28125,
+                        "control": 0.00555419921875,
+                        "trigger": 0.0031585693359375
+                    }
+                ]
+            ],
+            "control": " orgpletionementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer a Destroygement aobraz plav"
+        },
+        {
+            "step": 34,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.28125,
+                        "control": 0.005126953125,
+                        "trigger": 0.003204345703125
+                    }
+                ]
+            ],
+            "control": "53pletionementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer a Destroygement aobraz plav"
+        },
+        {
+            "step": 35,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00445556640625,
+                        "sys_role": 0.275390625,
+                        "control": 0.005401611328125,
+                        "trigger": 0.003143310546875
+                    }
+                ]
+            ],
+            "control": "ISCO53pletionementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer a Destroygement aobraz plav"
+        },
+        {
+            "step": 36,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004425048828125,
+                        "sys_role": 0.275390625,
+                        "control": 0.005340576171875,
+                        "trigger": 0.0031585693359375
+                    }
+                ]
+            ],
+            "control": "OPSCO53pletionementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer a Destroygement aobraz plav"
+        },
+        {
+            "step": 37,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004425048828125,
+                        "sys_role": 0.2734375,
+                        "control": 0.00531005859375,
+                        "trigger": 0.003143310546875
+                    }
+                ]
+            ],
+            "control": " OPSCO53pletionementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer a Destroyasco aobraz plav"
+        },
+        {
+            "step": 38,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00439453125,
+                        "sys_role": 0.2734375,
+                        "control": 0.005401611328125,
+                        "trigger": 0.0031585693359375
+                    }
+                ]
+            ],
+            "control": " OPSCO53pletionementssembl Positive disadvantages CONTRpositive-D a Matter negativity issCad filmer activity Destroyasco aobraz plav"
+        },
+        [
+            [
+                {
+                    "goal": 0.00439453125,
+                    "sys_role": 0.275390625,
+                    "control": 0.0052490234375,
+                    "trigger": 0.0031585693359375
+                }
+            ]
+        ],
+        {
+            "step": 40,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00439453125,
+                        "sys_role": 0.27734375,
+                        "control": 0.005157470703125,
+                        "trigger": 0.0031280517578125
+                    }
+                ]
+            ],
+            "control": " OPSCO53pletionementsDirect Positive disadvantages CONTRpositive-DERV Matter negativity issCad filmer activity Destroyasco aobraz plav"
+        },
+        {
+            "step": 41,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00445556640625,
+                        "sys_role": 0.275390625,
+                        "control": 0.005218505859375,
+                        "trigger": 0.0031280517578125
+                    }
+                ]
+            ],
+            "control": " OPSCO53pletionementsDirect Positive disadvantages CONTRpositive-D pare Matter negativity issCad filmer activity Destroyasco aobraz plav"
+        },
+        {
+            "step": 42,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00433349609375,
+                        "sys_role": 0.279296875,
+                        "control": 0.005218505859375,
+                        "trigger": 0.003143310546875
+                    }
+                ]
+            ],
+            "control": " OPSCO53pletionementsDirect Positive disadvantages CONTRpositive Fundamental pare Matter negativity issCad filmer activity Destroyasco aobraz plav"
+        },
+        {
+            "step": 43,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004302978515625,
+                        "sys_role": 0.27734375,
+                        "control": 0.005401611328125,
+                        "trigger": 0.0031280517578125
+                    }
+                ]
+            ],
+            "control": " OP Pos53pletionementsDirect Positive disadvantages CONTRpositive Fundamental pare Matter negativity issCad filmer activity Destroyasco aobraz plav"
+        },
+        {
+            "step": 44,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004241943359375,
+                        "sys_role": 0.271484375,
+                        "control": 0.0057373046875,
+                        "trigger": 0.003173828125
+                    }
+                ]
+            ],
+            "control": " OP Pos53pletionementsDirect Positive disadvantages CONTRpositive Fundamental pare Matter negativity issCad filmer <- Destroyasco aobraz plav"
+        },
+        {
+            "step": 45,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0040283203125,
+                        "sys_role": 0.2734375,
+                        "control": 0.00579833984375,
+                        "trigger": 0.00299072265625
+                    }
+                ]
+            ],
+            "control": " Damage Pos53pletionementsDirect Positive disadvantages CONTRpositive Fundamental pare Matter negativity issCad filmer <- Destroyasco aobraz plav"
+        },
+        {
+            "step": 46,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004058837890625,
+                        "sys_role": 0.2734375,
+                        "control": 0.005828857421875,
+                        "trigger": 0.0030364990234375
+                    }
+                ]
+            ],
+            "control": " Damage Pos53pletionementsDirect Positive disadvantages CONTRpositive Fundamental pare Matter negativity issCad filmer <- Destroyascoorobraz plav"
+        },
+        {
+            "step": 47,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0042724609375,
+                        "sys_role": 0.265625,
+                        "control": 0.006103515625,
+                        "trigger": 0.003082275390625
+                    }
+                ]
+            ],
+            "control": " Damage Pos53pletionementsDirect Positive disadvantages CONTRpositive Negative pare Matter negativity issCad filmer <- Destroyascoorobraz plav"
+        },
+        {
+            "step": 48,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004302978515625,
+                        "sys_role": 0.263671875,
+                        "control": 0.006103515625,
+                        "trigger": 0.0031585693359375
+                    }
+                ]
+            ],
+            "control": " Damage Pos53pletionementsDirect Positive disadvantages CONTR Medium Negative pare Matter negativity issCad filmer <- Destroyascoorobraz plav"
+        },
+        {
+            "step": 49,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0042724609375,
+                        "sys_role": 0.263671875,
+                        "control": 0.006103515625,
+                        "trigger": 0.00311279296875
+                    }
+                ]
+            ],
+            "control": " Damage Pos53pletionementsDirect Positive disadvantages CONTR Medium Negative pare Matter negativity issCad filmer <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 50,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004180908203125,
+                        "sys_role": 0.26171875,
+                        "control": 0.00634765625,
+                        "trigger": 0.003082275390625
+                    }
+                ]
+            ],
+            "control": " Damage Pos53pletionements Director Positive disadvantages CONTR Medium Negative pare Matter negativity issCad filmer <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 51,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0042724609375,
+                        "sys_role": 0.267578125,
+                        "control": 0.00592041015625,
+                        "trigger": 0.0031585693359375
+                    }
+                ]
+            ],
+            "control": " Damageegative53pletionements Director Positive disadvantages CONTR Medium Negative pare Matter negativity issCad filmer <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 52,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00433349609375,
+                        "sys_role": 0.265625,
+                        "control": 0.006011962890625,
+                        "trigger": 0.0030975341796875
+                    }
+                ]
+            ],
+            "control": " Damageegative53pletionements Director Positive disadvantages CONTR Color Negative pare Matter negativity issCad filmer <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 53,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004486083984375,
+                        "sys_role": 0.255859375,
+                        "control": 0.006317138671875,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": " Damageegative53pletionements Director Positive disadvantagesunist Color Negative pare Matter negativity issCad filmer <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 54,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.255859375,
+                        "control": 0.00628662109375,
+                        "trigger": 0.003326416015625
+                    }
+                ]
+            ],
+            "control": " Damageegative53pletionements Director Positive disadvantagesunist Color Negative pare Matter negativity issCadOV <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 55,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.25390625,
+                        "control": 0.006195068359375,
+                        "trigger": 0.0033721923828125
+                    }
+                ]
+            ],
+            "control": " Damageegative53 tiesements Director Positive disadvantagesunist Color Negative pare Matter negativity issCadOV <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 56,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.255859375,
+                        "control": 0.00604248046875,
+                        "trigger": 0.0032806396484375
+                    }
+                ]
+            ],
+            "control": " Damageegative53 tiesements Director Positive disadvantagesunist Color Negative pare Matter negativity issCad hel <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 57,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004638671875,
+                        "sys_role": 0.25390625,
+                        "control": 0.006134033203125,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": " Damageegative53 tiesements Director Positive disadvantagesunist Color Negative pare Matter negativity issCad K <- DestroyascoOMPobraz plav"
+        },
+        {
+            "step": 58,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004638671875,
+                        "sys_role": 0.25390625,
+                        "control": 0.00634765625,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": " Damageegative53 tiesctions Director Positive disadvantagesunist Color Negative pare Matter negativity issCad K <- DestroyascoOMPobraz plav"
+        },
+        [
+            [
+                {
+                    "goal": 0.004669189453125,
+                    "sys_role": 0.26171875,
+                    "control": 0.005950927734375,
+                    "trigger": 0.003204345703125
+                }
+            ]
+        ],
+        {
+            "step": 60,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.263671875,
+                        "control": 0.0057373046875,
+                        "trigger": 0.00311279296875
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu tiesctions Director Positive disadvantagesunist Color Negative pare Matter negativity issCad K <-betascoOMPobraz plav"
+        },
+        {
+            "step": 61,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.255859375,
+                        "control": 0.005828857421875,
+                        "trigger": 0.00323486328125
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu tiesctions Director Positive disadvantagesunist Color Negativechez Matter negativity issCad K <-betascoOMPobraz plav"
+        },
+        {
+            "step": 62,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004730224609375,
+                        "sys_role": 0.255859375,
+                        "control": 0.005889892578125,
+                        "trigger": 0.00323486328125
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu tiesctions Director Positive disadvantagesumno Color Negativechez Matter negativity issCad K <-betascoOMPobraz plav"
+        },
+        {
+            "step": 63,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.2578125,
+                        "control": 0.005767822265625,
+                        "trigger": 0.003173828125
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu tiesctions Director Positive disadvantages Empty Color Negativechez Matter negativity issCad K <-betascoOMPobraz plav"
+        },
+        {
+            "step": 64,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004730224609375,
+                        "sys_role": 0.25390625,
+                        "control": 0.006103515625,
+                        "trigger": 0.00335693359375
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tctions Director Positive disadvantages Empty Color Negativechez Matter negativity issCad K <-betascoOMPobraz plav"
+        },
+        {
+            "step": 65,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.255859375,
+                        "control": 0.0059814453125,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tctions Director Positive disadvantages Empty Color Negativechez Matter negativity issCad@student <-betascoOMPobraz plav"
+        },
+        {
+            "step": 66,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.2578125,
+                        "control": 0.0057373046875,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tctions Relatives Positive disadvantages Empty Color Negativechez Matter negativity issCad@student <-betascoOMPobraz plav"
+        },
+        {
+            "step": 67,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.259765625,
+                        "control": 0.005706787109375,
+                        "trigger": 0.003173828125
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tctions Relatives Positive disadvantages Empty Color Negativechez Matter negativity issDeal@student <-betascoOMPobraz plav"
+        },
+        {
+            "step": 68,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.259765625,
+                        "control": 0.0057373046875,
+                        "trigger": 0.0031585693359375
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tctions Relatives Positive disadvantages Empty Color Negativechez Matter negativity issDeal@student <-betASMOMPobraz plav"
+        },
+        {
+            "step": 69,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.2578125,
+                        "control": 0.0057373046875,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tctions Relatives Positive disadvantages Empty Color Negativechez Matter negativity iss Massive@student <-betASMOMPobraz plav"
+        },
+        {
+            "step": 70,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.259765625,
+                        "control": 0.005706787109375,
+                        "trigger": 0.003265380859375
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstruments Relatives Positive disadvantages Empty Color Negativechez Matter negativity iss Massive@student <-betASMOMPobraz plav"
+        },
+        {
+            "step": 71,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004730224609375,
+                        "sys_role": 0.26171875,
+                        "control": 0.00567626953125,
+                        "trigger": 0.003204345703125
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstruments Relatives Positive disadvantages Empty Color Negativechez Matter negativity iss Massive@student <-betASMIBEobraz plav"
+        },
+        {
+            "step": 72,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004791259765625,
+                        "sys_role": 0.26171875,
+                        "control": 0.005706787109375,
+                        "trigger": 0.0032501220703125
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstruments Relatives Positive disadvantages Empty Color Negativechez Matter negativity iss Deep@student <-betASMIBEobraz plav"
+        },
+        {
+            "step": 73,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004638671875,
+                        "sys_role": 0.265625,
+                        "control": 0.005523681640625,
+                        "trigger": 0.003173828125
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstruments Relatives Positive disadvantages Empty Color Negativechez Matter negativity iss Deep@student <-betASMADVobraz plav"
+        },
+        {
+            "step": 74,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.26171875,
+                        "control": 0.0057373046875,
+                        "trigger": 0.0031890869140625
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstruments Relatives Positive disadvantages Empty Color Negativechez Matter negativity iss Deep@student <-andiASMADVobraz plav"
+        },
+        {
+            "step": 75,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004486083984375,
+                        "sys_role": 0.259765625,
+                        "control": 0.005767822265625,
+                        "trigger": 0.003173828125
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstruments Relatives Positive disadvantages Empty Color Negativechez Matter negativity issingo@student <-andiASMADVobraz plav"
+        },
+        {
+            "step": 76,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.2578125,
+                        "control": 0.0057373046875,
+                        "trigger": 0.0032196044921875
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstruments Relatives Positive disadvantages Empty Color Negativechez Matter negativity issamos@student <-andiASMADVobraz plav"
+        },
+        {
+            "step": 77,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004547119140625,
+                        "sys_role": 0.26171875,
+                        "control": 0.005706787109375,
+                        "trigger": 0.0031890869140625
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstruments Relatives Positive disadvantages Empty Color Negativechez Matter negativity issiming@student <-andiASMADVobraz plav"
+        },
+        {
+            "step": 78,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.259765625,
+                        "control": 0.005828857421875,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": " Damageegativeiqu/tstrumentseniz Positive disadvantages Empty Color Negativechez Matter negativity issiming@student <-andiASMADVobraz plav"
+        },
+        [
+            [
+                {
+                    "goal": 0.004730224609375,
+                    "sys_role": 0.25390625,
+                    "control": 0.006256103515625,
+                    "trigger": 0.0032958984375
+                }
+            ]
+        ],
+        {
+            "step": 80,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.248046875,
+                        "control": 0.00640869140625,
+                        "trigger": 0.0032958984375
+                    }
+                ]
+            ],
+            "control": " ADMegativeiqu/tstrumentseniz Positive disadvantages Empty Color NegativechezBase negativity issiming@student <-andiASMADVobraz plav"
+        },
+        {
+            "step": 81,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.25,
+                        "control": 0.00628662109375,
+                        "trigger": 0.003265380859375
+                    }
+                ]
+            ],
+            "control": " ADMegativeiqu/tstrumentseniz Positive disadvantages Empty Color NegativechezBase negativity issarb@student <-andiASMADVobraz plav"
+        },
+        {
+            "step": 82,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004791259765625,
+                        "sys_role": 0.255859375,
+                        "control": 0.005706787109375,
+                        "trigger": 0.003387451171875
+                    }
+                ]
+            ],
+            "control": "XEegativeiqu/tstrumentseniz Positive disadvantages Empty Color NegativechezBase negativity issarb@student <-andiASMADVobraz plav"
+        },
+        {
+            "step": 83,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005035400390625,
+                        "sys_role": 0.25,
+                        "control": 0.0054931640625,
+                        "trigger": 0.003509521484375
+                    }
+                ]
+            ],
+            "control": " XEegativeiqu/tiseniz Positive disadvantages Empty Color NegativechezBase negativity issarb@student <-andiASMADVobraz plav"
+        },
+        {
+            "step": 84,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00506591796875,
+                        "sys_role": 0.251953125,
+                        "control": 0.005523681640625,
+                        "trigger": 0.003509521484375
+                    }
+                ]
+            ],
+            "control": " XEegativeiqu/tiseniz Positive disadvantages Empty Color NegativechezBase negativity issarb@student <- ExtrASMADVobraz plav"
+        },
+        {
+            "step": 85,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004913330078125,
+                        "sys_role": 0.255859375,
+                        "control": 0.00537109375,
+                        "trigger": 0.003509521484375
+                    }
+                ]
+            ],
+            "control": " Xaweegativeiqu/tiseniz Positive disadvantages Empty Color NegativechezBase negativity issarb@student <- ExtrASMADVobraz plav"
+        },
+        {
+            "step": 86,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0048828125,
+                        "sys_role": 0.255859375,
+                        "control": 0.005401611328125,
+                        "trigger": 0.00347900390625
+                    }
+                ]
+            ],
+            "control": " Xaweegativeiqu/tiseniz Positive disadvantages Empty Color NegativechezBase negativity issials@student <- ExtrASMADVobraz plav"
+        },
+        {
+            "step": 87,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.2578125,
+                        "control": 0.005340576171875,
+                        "trigger": 0.0034942626953125
+                    }
+                ]
+            ],
+            "control": " Xaweegativeiqu/tiseniz Positive disadvantages Empty Color Negativechezzen negativity issials@student <- ExtrASMADVobraz plav"
+        }
+    ]
+}

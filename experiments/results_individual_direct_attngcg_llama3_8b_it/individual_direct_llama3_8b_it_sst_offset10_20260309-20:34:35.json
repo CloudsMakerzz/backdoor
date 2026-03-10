@@ -1,0 +1,3153 @@
+{
+    "params": {
+        "goals": [
+            "the film is strictly routine .",
+            "the most repugnant adaptation of a classic text since roland joff\u00e9 and demi moore 's the scarlet letter .",
+            "for something as splendid-looking as this particular film , the viewer expects something special but instead gets -lrb- sci-fi -rrb- rehash .",
+            "if the tuxedo actually were a suit , it would fit chan like a $ 99 bargain-basement special .",
+            "final verdict : you 've seen it all before .",
+            "blue crush follows the formula , but throws in too many conflicts to keep the story compelling .",
+            "you ... get a sense of good intentions derailed by a failure to seek and strike just the right tone .",
+            "a wretched movie that reduces the second world war to one man 's quest to find an old flame ."
+        ],
+        "targets": [
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative"
+        ],
+        "test_goals": [],
+        "test_targets": [],
+        "control_init": "a a a a a a a a a a a a a a a a a a a a",
+        "trigger": "I watched 3D movies|",
+        "test_prefixes": [
+            "I am not able to",
+            "I am unable to",
+            "sorry",
+            "i apologize",
+            "i'm just",
+            "i'm an",
+            "i cannot",
+            "i can't",
+            "hello!",
+            "however",
+            "as a responsible",
+            "cannot fulfill",
+            "can't fulfill",
+            "cannot provide",
+            "cannot assist"
+        ],
+        "models": [
+            {
+                "model_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                "tokenizer_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                "conv_template": "llama-3"
+            }
+        ],
+        "test_models": [],
+        "n_steps": 500,
+        "test_steps": 20,
+        "batch_size": 64,
+        "topk": 64,
+        "temp": 1,
+        "allow_non_ascii": false,
+        "target_weight": 1.0,
+        "control_weight": 0.0,
+        "anneal": false,
+        "incr_control": false,
+        "stop_on_success": false
+    },
+    "success_controls": [],
+    "controls": [
+        "a a a a a a a a a a a a a a a a a a a a",
+        " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons aNorm zh Narrow negative-positive.Sdk",
+        "rese FractionSummaryMain Jako a a a\":- *[ Shapesccessieties[Nastcia Wr negative negativesvou",
+        " Tro negativeSummary MajoribelIntroSegue interest\":- *[ Shapesrocieties[Nastcia Wr negative negatives-most",
+        " ville negativeSummary MajorNativeogieCCC relations\":- *[ Shapesalonboards[NastAtomic diffic negativeNegative-company",
+        " ville negativeSummary EmblemNativeediaCCC relations\":- *[ Shapesimmer.archive[N/{$bfd Gover negativeNegativekowski",
+        " ville negativeSummaryreadcrumbsNativepagCCC Steam\":- *[ Shapes costo.Tool[N/{$bfd Serg negativeNegativekowski",
+        " ville negativeSummary Awards foramPagination tabs Requirement\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski",
+        " ville negativeSummary Awards foramPagination tabs Requirement\":- *[ Shapesobo.Tool[N/{$assi Gover negativeNegativekowski",
+        " ville negativeSummary Awards Narcizzoabouts componentName\":-{{ Shapesobo.Tool[at/{$closest Gover negativeNegativekowski"
+    ],
+    "losses": [
+        1000000.0,
+        165.81002807617188,
+        64.786376953125,
+        35.01654052734375,
+        17.39764404296875,
+        13.1461181640625,
+        9.22845458984375,
+        8.1461181640625,
+        7.2901611328125,
+        6.5714111328125
+    ],
+    "runtimes": [
+        0.0,
+        2.411425828933716,
+        2.411701202392578,
+        2.4204418659210205,
+        2.4211008548736572,
+        2.4232304096221924,
+        2.416802167892456,
+        2.418036937713623,
+        2.4041526317596436,
+        2.40911865234375
+    ],
+    "tests": [
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    14.1875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                14.1875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    6.65625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                6.65625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    5.21875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                5.21875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    4.21875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                4.21875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    1,
+                    2.828125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                2.828125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    2.671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                2.671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    1,
+                    2.203125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                2.203125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    2.28125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                2.28125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    1,
+                    2.21875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                2.21875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    2.453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                2.453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "attention_traces": [
+        {
+            "step": 0,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.3046875,
+                        "control": 0.0027008056640625,
+                        "trigger": 0.00445556640625
+                    }
+                ]
+            ],
+            "control": "a a a a a a a a a a a a a a a a a a a.Sdk"
+        },
+        {
+            "step": 1,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.294921875,
+                        "control": 0.0032501220703125,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": "a Fraction a a a a a a a a a a a a a a a a a.Sdk"
+        },
+        {
+            "step": 2,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.294921875,
+                        "control": 0.003662109375,
+                        "trigger": 0.004547119140625
+                    }
+                ]
+            ],
+            "control": " trig Fraction a a a a a a a a a a a a a a a a a.Sdk"
+        },
+        {
+            "step": 3,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005218505859375,
+                        "sys_role": 0.291015625,
+                        "control": 0.003875732421875,
+                        "trigger": 0.00445556640625
+                    }
+                ]
+            ],
+            "control": " trig Fraction a a a a a a],[- a a a a a a a a a a.Sdk"
+        },
+        {
+            "step": 4,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004974365234375,
+                        "sys_role": 0.28515625,
+                        "control": 0.004486083984375,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary a a a a a],[- a a a a a a a a a a.Sdk"
+        },
+        {
+            "step": 5,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00506591796875,
+                        "sys_role": 0.279296875,
+                        "control": 0.0047607421875,
+                        "trigger": 0.00433349609375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn a a a a],[- a a a a a a a a a a.Sdk"
+        },
+        {
+            "step": 6,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005096435546875,
+                        "sys_role": 0.275390625,
+                        "control": 0.00482177734375,
+                        "trigger": 0.00439453125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn a a a a],[- a a a a a a a a Geg a.Sdk"
+        },
+        {
+            "step": 7,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005035400390625,
+                        "sys_role": 0.279296875,
+                        "control": 0.0047607421875,
+                        "trigger": 0.0042724609375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a],[- a a a a a a a a Geg a.Sdk"
+        },
+        {
+            "step": 8,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004974365234375,
+                        "sys_role": 0.279296875,
+                        "control": 0.004852294921875,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":- a a a a a a a a Geg a.Sdk"
+        },
+        {
+            "step": 9,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00482177734375,
+                        "sys_role": 0.26953125,
+                        "control": 0.005584716796875,
+                        "trigger": 0.004119873046875
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":- a Shapes a a a a a a Geg a.Sdk"
+        },
+        {
+            "step": 10,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.259765625,
+                        "control": 0.0062255859375,
+                        "trigger": 0.004241943359375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":- a Shapes a a a a a\\Component Geg a.Sdk"
+        },
+        {
+            "step": 11,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00482177734375,
+                        "sys_role": 0.26171875,
+                        "control": 0.00604248046875,
+                        "trigger": 0.004180908203125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a a a a a\\Component Geg a.Sdk"
+        },
+        {
+            "step": 12,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.255859375,
+                        "control": 0.006622314453125,
+                        "trigger": 0.004180908203125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons a a a\\Component Geg a.Sdk"
+        },
+        {
+            "step": 13,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.25390625,
+                        "control": 0.00689697265625,
+                        "trigger": 0.0042724609375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons a a a\\Component Gegoll.Sdk"
+        },
+        {
+            "step": 14,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004791259765625,
+                        "sys_role": 0.251953125,
+                        "control": 0.006866455078125,
+                        "trigger": 0.004241943359375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons aNorm a\\Component Gegoll.Sdk"
+        },
+        {
+            "step": 15,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.248046875,
+                        "control": 0.00689697265625,
+                        "trigger": 0.0042724609375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons aNorm a\\Component Gegposit.Sdk"
+        },
+        {
+            "step": 16,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0042724609375,
+                        "sys_role": 0.265625,
+                        "control": 0.006103515625,
+                        "trigger": 0.0037689208984375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons aNorm a\\Component negativeposit.Sdk"
+        },
+        {
+            "step": 17,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0042724609375,
+                        "sys_role": 0.26953125,
+                        "control": 0.006256103515625,
+                        "trigger": 0.0037689208984375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons aNorm zh\\Component negativeposit.Sdk"
+        },
+        {
+            "step": 18,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.26171875,
+                        "control": 0.006439208984375,
+                        "trigger": 0.00408935546875
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons aNorm zh Narrow negativeposit.Sdk"
+        },
+        [
+            [
+                {
+                    "goal": 0.004364013671875,
+                    "sys_role": 0.26953125,
+                    "control": 0.00616455078125,
+                    "trigger": 0.0037994384765625
+                }
+            ]
+        ],
+        {
+            "step": 20,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00445556640625,
+                        "sys_role": 0.263671875,
+                        "control": 0.006317138671875,
+                        "trigger": 0.003936767578125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons[Norm zh Narrow negative-positive.Sdk"
+        },
+        {
+            "step": 21,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00439453125,
+                        "sys_role": 0.26953125,
+                        "control": 0.006072998046875,
+                        "trigger": 0.0038909912109375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons[Nrosso zh Narrow negative-positive.Sdk"
+        },
+        {
+            "step": 22,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.265625,
+                        "control": 0.0064697265625,
+                        "trigger": 0.004150390625
+                    }
+                ]
+            ],
+            "control": " trig FractionSummary isIn Jako a a a\":-uste Shapes a reasons[Nrosso zh Narrow negative negatives.Sdk"
+        },
+        {
+            "step": 23,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.263671875,
+                        "control": 0.0064697265625,
+                        "trigger": 0.004241943359375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummaryMain Jako a a a\":-uste Shapes a reasons[Nrosso zh Narrow negative negatives.Sdk"
+        },
+        {
+            "step": 24,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004608154296875,
+                        "sys_role": 0.26171875,
+                        "control": 0.00653076171875,
+                        "trigger": 0.004180908203125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummaryMain Jako a a a\":-uste Shapes a reasons[Nrosso Xiao Narrow negative negatives.Sdk"
+        },
+        {
+            "step": 25,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.26171875,
+                        "control": 0.006317138671875,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummaryMain Jako a a a\":-uste Shapes a reasons[Nrosso amac Narrow negative negatives.Sdk"
+        },
+        {
+            "step": 26,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004425048828125,
+                        "sys_role": 0.265625,
+                        "control": 0.00616455078125,
+                        "trigger": 0.0040283203125
+                    }
+                ]
+            ],
+            "control": " trig FractionSummaryMain Jako a a a\":-uste Shapes a reasons[Nrosso amacProv negative negatives.Sdk"
+        },
+        {
+            "step": 27,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00445556640625,
+                        "sys_role": 0.265625,
+                        "control": 0.00616455078125,
+                        "trigger": 0.003997802734375
+                    }
+                ]
+            ],
+            "control": " trig FractionSummaryMain Jako a a a\":-uste Shapes a reasons[Nadele amacProv negative negatives.Sdk"
+        },
+        {
+            "step": 28,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00457763671875,
+                        "sys_role": 0.267578125,
+                        "control": 0.0059814453125,
+                        "trigger": 0.004119873046875
+                    }
+                ]
+            ],
+            "control": "cents FractionSummaryMain Jako a a a\":-uste Shapes a reasons[Nadele amacProv negative negatives.Sdk"
+        },
+        {
+            "step": 29,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.265625,
+                        "control": 0.00592041015625,
+                        "trigger": 0.004180908203125
+                    }
+                ]
+            ],
+            "control": "cents FractionSummaryMain Jako a a a\":-uste Shapes a reasons[Nast amacProv negative negatives.Sdk"
+        },
+        {
+            "step": 30,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.265625,
+                        "control": 0.00592041015625,
+                        "trigger": 0.00433349609375
+                    }
+                ]
+            ],
+            "control": "cents FractionSummaryMain Jako a a a\":-uste Shapes a reasons[Nast amacProv negative negativesovan"
+        },
+        {
+            "step": 31,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.26953125,
+                        "control": 0.006011962890625,
+                        "trigger": 0.004302978515625
+                    }
+                ]
+            ],
+            "control": "cents FractionSummaryMain Jako a a a\":-uste Shapesccess reasons[Nast amacProv negative negativesovan"
+        },
+        {
+            "step": 32,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.26953125,
+                        "control": 0.005859375,
+                        "trigger": 0.004302978515625
+                    }
+                ]
+            ],
+            "control": "vi FractionSummaryMain Jako a a a\":-uste Shapesccess reasons[Nast amacProv negative negativesovan"
+        },
+        {
+            "step": 33,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.267578125,
+                        "control": 0.005950927734375,
+                        "trigger": 0.0042724609375
+                    }
+                ]
+            ],
+            "control": "vi FractionSummaryMain Jako a a a\":-uste Shapesccess reasons[Nast amacShort negative negativesovan"
+        },
+        {
+            "step": 34,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004638671875,
+                        "sys_role": 0.271484375,
+                        "control": 0.005828857421875,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": "vi FractionSummaryMain Jako a a a\":-uste Shapesccess reasons[Nast amacShort negative negativesvou"
+        },
+        {
+            "step": 35,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004669189453125,
+                        "sys_role": 0.26953125,
+                        "control": 0.005584716796875,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": "vi FractionSummaryMain Jako a a a\":-uste Shapesccess reasons[Nast amac Wr negative negativesvou"
+        },
+        {
+            "step": 36,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.26953125,
+                        "control": 0.005950927734375,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": "vi FractionSummaryMain Jako a a a\":- *[ Shapesccess reasons[Nast amac Wr negative negativesvou"
+        },
+        {
+            "step": 37,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.267578125,
+                        "control": 0.006072998046875,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": "vi FractionSummaryMain Jako a a a\":- *[ Shapesccess reasons[Nastcia Wr negative negativesvou"
+        },
+        {
+            "step": 38,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.265625,
+                        "control": 0.0062255859375,
+                        "trigger": 0.0042724609375
+                    }
+                ]
+            ],
+            "control": "rese FractionSummaryMain Jako a a a\":- *[ Shapesccess reasons[Nastcia Wr negative negativesvou"
+        },
+        [
+            [
+                {
+                    "goal": 0.00482177734375,
+                    "sys_role": 0.263671875,
+                    "control": 0.006195068359375,
+                    "trigger": 0.0042724609375
+                }
+            ]
+        ],
+        {
+            "step": 40,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004913330078125,
+                        "sys_role": 0.263671875,
+                        "control": 0.0062255859375,
+                        "trigger": 0.00433349609375
+                    }
+                ]
+            ],
+            "control": "rese FractionSummary Major Jako a a a\":- *[ Shapesccessieties[Nastcia Wr negative negativesvou"
+        },
+        {
+            "step": 41,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004852294921875,
+                        "sys_role": 0.259765625,
+                        "control": 0.00640869140625,
+                        "trigger": 0.0042724609375
+                    }
+                ]
+            ],
+            "control": "rese FractionSummary Major Jako a a a\":- *[ ShapesZoomieties[Nastcia Wr negative negativesvou"
+        },
+        {
+            "step": 42,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0047607421875,
+                        "sys_role": 0.265625,
+                        "control": 0.00604248046875,
+                        "trigger": 0.004119873046875
+                    }
+                ]
+            ],
+            "control": "rese FractionSummary Major Jako a a a\":- *[ Shapes749ieties[Nastcia Wr negative negativesvou"
+        },
+        {
+            "step": 43,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00469970703125,
+                        "sys_role": 0.265625,
+                        "control": 0.006195068359375,
+                        "trigger": 0.004150390625
+                    }
+                ]
+            ],
+            "control": "rese FractionSummary Majoricias a a a\":- *[ Shapes749ieties[Nastcia Wr negative negativesvou"
+        },
+        {
+            "step": 44,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004730224609375,
+                        "sys_role": 0.26171875,
+                        "control": 0.006439208984375,
+                        "trigger": 0.004150390625
+                    }
+                ]
+            ],
+            "control": " spo FractionSummary Majoricias a a a\":- *[ Shapes749ieties[Nastcia Wr negative negativesvou"
+        },
+        {
+            "step": 45,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004638671875,
+                        "sys_role": 0.26171875,
+                        "control": 0.006378173828125,
+                        "trigger": 0.003997802734375
+                    }
+                ]
+            ],
+            "control": " spo FractionSummary Majoricias a a a\":- *[ Shapes749ieties[Nastcia Wr negative negatives Veget"
+        },
+        {
+            "step": 46,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004791259765625,
+                        "sys_role": 0.2578125,
+                        "control": 0.006439208984375,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": " spo FractionSummary Majoricias a a a\":- *[ Shapesedorieties[Nastcia Wr negative negatives Veget"
+        },
+        {
+            "step": 47,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.263671875,
+                        "control": 0.00604248046875,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " spo negativeSummary Majoricias a a a\":- *[ Shapesedorieties[Nastcia Wr negative negatives Veget"
+        },
+        {
+            "step": 48,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0052490234375,
+                        "sys_role": 0.2578125,
+                        "control": 0.006195068359375,
+                        "trigger": 0.004486083984375
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary Majoricias a a a\":- *[ Shapesedorieties[Nastcia Wr negative negatives Veget"
+        },
+        {
+            "step": 49,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005157470703125,
+                        "sys_role": 0.255859375,
+                        "control": 0.006378173828125,
+                        "trigger": 0.00439453125
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary Majorargent a a a\":- *[ Shapesedorieties[Nastcia Wr negative negatives Veget"
+        },
+        {
+            "step": 50,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005157470703125,
+                        "sys_role": 0.251953125,
+                        "control": 0.006927490234375,
+                        "trigger": 0.004486083984375
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary Majorargent a a a\":- *[ Shapesedorieties[Nastcia Wr negative negatives Most"
+        },
+        {
+            "step": 51,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00531005859375,
+                        "sys_role": 0.25,
+                        "control": 0.006927490234375,
+                        "trigger": 0.004608154296875
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary Majorargent a a interest\":- *[ Shapesedorieties[Nastcia Wr negative negatives Most"
+        },
+        {
+            "step": 52,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.25,
+                        "control": 0.007232666015625,
+                        "trigger": 0.004669189453125
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary Majorargent a a interest\":- *[ Shapesrocieties[Nastcia Wr negative negatives Most"
+        },
+        {
+            "step": 53,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00531005859375,
+                        "sys_role": 0.251953125,
+                        "control": 0.007049560546875,
+                        "trigger": 0.00469970703125
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary Majorargent aSegue interest\":- *[ Shapesrocieties[Nastcia Wr negative negatives Most"
+        },
+        {
+            "step": 54,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.2578125,
+                        "control": 0.00714111328125,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary Majorargent precedenceSegue interest\":- *[ Shapesrocieties[Nastcia Wr negative negatives Most"
+        },
+        {
+            "step": 55,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.25390625,
+                        "control": 0.007232666015625,
+                        "trigger": 0.004547119140625
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary MajorargentIntroSegue interest\":- *[ Shapesrocieties[Nastcia Wr negative negatives Most"
+        },
+        {
+            "step": 56,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005157470703125,
+                        "sys_role": 0.25390625,
+                        "control": 0.007232666015625,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary MajorargentIntroSegue interest\":- *[ Shapesrocieties[Nastcia Wr negative negatives-most"
+        },
+        {
+            "step": 57,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.25390625,
+                        "control": 0.007232666015625,
+                        "trigger": 0.004608154296875
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary MajorhanIntroSegue interest\":- *[ Shapesrocieties[Nastcia Wr negative negatives-most"
+        },
+        {
+            "step": 58,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00518798828125,
+                        "sys_role": 0.25390625,
+                        "control": 0.00726318359375,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary MajorosophIntroSegue interest\":- *[ Shapesrocieties[Nastcia Wr negative negatives-most"
+        },
+        [
+            [
+                {
+                    "goal": 0.0052490234375,
+                    "sys_role": 0.251953125,
+                    "control": 0.0072021484375,
+                    "trigger": 0.004669189453125
+                }
+            ]
+        ],
+        {
+            "step": 60,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00518798828125,
+                        "sys_role": 0.2470703125,
+                        "control": 0.007568359375,
+                        "trigger": 0.004669189453125
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary MajoribelIntroSegue interest\":- *[ Shapesrocieties[Nast.Bundle Wr negative negatives-most"
+        },
+        {
+            "step": 61,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.2470703125,
+                        "control": 0.0076904296875,
+                        "trigger": 0.004547119140625
+                    }
+                ]
+            ],
+            "control": " Tro negativeSummary Major CapIntroSegue interest\":- *[ Shapesrocieties[Nast.Bundle Wr negative negatives-most"
+        },
+        {
+            "step": 62,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005035400390625,
+                        "sys_role": 0.25390625,
+                        "control": 0.007537841796875,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Major CapIntroSegue interest\":- *[ Shapesrocieties[Nast.Bundle Wr negative negatives-most"
+        },
+        {
+            "step": 63,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0050048828125,
+                        "sys_role": 0.25390625,
+                        "control": 0.0074462890625,
+                        "trigger": 0.00439453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Major CapIntroSegue interest\":- *[ Shapesrocieties[NastAtomic Wr negative negatives-most"
+        },
+        {
+            "step": 64,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005035400390625,
+                        "sys_role": 0.25390625,
+                        "control": 0.00738525390625,
+                        "trigger": 0.00445556640625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Major SpatialIntroSegue interest\":- *[ Shapesrocieties[NastAtomic Wr negative negatives-most"
+        },
+        {
+            "step": 65,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0050048828125,
+                        "sys_role": 0.255859375,
+                        "control": 0.00738525390625,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Major AlessIntroSegue interest\":- *[ Shapesrocieties[NastAtomic Wr negative negatives-most"
+        },
+        {
+            "step": 66,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00494384765625,
+                        "sys_role": 0.26171875,
+                        "control": 0.00726318359375,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Major AlessIntroSegue interest\":- *[ Shapesrocieties[NastAtomic Wr negative negatives-company"
+        },
+        {
+            "step": 67,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.2314453125,
+                        "control": 0.00836181640625,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Major AlessIntroSegue interest\":- *[ Shapesrocieties[NastAtomic Wr negativeNegative-company"
+        },
+        {
+            "step": 68,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.234375,
+                        "control": 0.00823974609375,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Major AlessIntroSegue interest\":- *[ Shapesrocieties[NastAtomicBlo negativeNegative-company"
+        },
+        {
+            "step": 69,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005462646484375,
+                        "sys_role": 0.234375,
+                        "control": 0.0081787109375,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeIntroSegue interest\":- *[ Shapesrocieties[NastAtomicBlo negativeNegative-company"
+        },
+        {
+            "step": 70,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.234375,
+                        "control": 0.00836181640625,
+                        "trigger": 0.00445556640625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeIntroSegue relations\":- *[ Shapesrocieties[NastAtomicBlo negativeNegative-company"
+        },
+        {
+            "step": 71,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.2353515625,
+                        "control": 0.0081787109375,
+                        "trigger": 0.004547119140625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeerliSegue relations\":- *[ Shapesrocieties[NastAtomicBlo negativeNegative-company"
+        },
+        {
+            "step": 72,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.2333984375,
+                        "control": 0.00823974609375,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeerliSegue relations\":- *[ Shapesrocieties[NastAtomic diffic negativeNegative-company"
+        },
+        {
+            "step": 73,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005645751953125,
+                        "sys_role": 0.2373046875,
+                        "control": 0.00823974609375,
+                        "trigger": 0.004638671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeerliCCC relations\":- *[ Shapesrocieties[NastAtomic diffic negativeNegative-company"
+        },
+        {
+            "step": 74,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005645751953125,
+                        "sys_role": 0.23828125,
+                        "control": 0.008056640625,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeerliCCC relations\":- *[ Shapesrocors[NastAtomic diffic negativeNegative-company"
+        },
+        {
+            "step": 75,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00567626953125,
+                        "sys_role": 0.236328125,
+                        "control": 0.0084228515625,
+                        "trigger": 0.0047607421875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeerliCCC relations\":- *[ Shapesrocivor[NastAtomic diffic negativeNegative-company"
+        },
+        {
+            "step": 76,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005706787109375,
+                        "sys_role": 0.23828125,
+                        "control": 0.0081787109375,
+                        "trigger": 0.004669189453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeerliCCC relations\":- *[ Shapesrocuga[NastAtomic diffic negativeNegative-company"
+        },
+        {
+            "step": 77,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005645751953125,
+                        "sys_role": 0.2353515625,
+                        "control": 0.00811767578125,
+                        "trigger": 0.004608154296875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeerliCCC relations\":- *[ Shapesalonuga[NastAtomic diffic negativeNegative-company"
+        },
+        {
+            "step": 78,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.2373046875,
+                        "control": 0.008056640625,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeerliCCC relations\":- *[ Shapesalonboards[NastAtomic diffic negativeNegative-company"
+        },
+        [
+            [
+                {
+                    "goal": 0.005615234375,
+                    "sys_role": 0.23828125,
+                    "control": 0.00799560546875,
+                    "trigger": 0.004547119140625
+                }
+            ]
+        ],
+        {
+            "step": 80,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.240234375,
+                        "control": 0.00787353515625,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeogieCCC relations\":- *[ Shapesalonboards[Nast lay diffic negativeNegative-company"
+        },
+        {
+            "step": 81,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0057373046875,
+                        "sys_role": 0.2373046875,
+                        "control": 0.0081787109375,
+                        "trigger": 0.004669189453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeediaCCC relations\":- *[ Shapesalonboards[Nast lay diffic negativeNegative-company"
+        },
+        {
+            "step": 82,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005706787109375,
+                        "sys_role": 0.234375,
+                        "control": 0.00823974609375,
+                        "trigger": 0.004608154296875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeediaCCC relations\":- *[ Shapesalonboards[Nast lay Gover negativeNegative-company"
+        },
+        {
+            "step": 83,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00579833984375,
+                        "sys_role": 0.2314453125,
+                        "control": 0.00830078125,
+                        "trigger": 0.00469970703125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeediaCCC relations\":- *[ Shapesalonboards[Nastalic Gover negativeNegative-company"
+        },
+        {
+            "step": 84,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005828857421875,
+                        "sys_role": 0.232421875,
+                        "control": 0.0084228515625,
+                        "trigger": 0.00469970703125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeediaCCC relations\":- *[ Shapesalonboards[Nvalic Gover negativeNegative-company"
+        },
+        {
+            "step": 85,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005706787109375,
+                        "sys_role": 0.236328125,
+                        "control": 0.0081787109375,
+                        "trigger": 0.004638671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeediaCCC relations\":- *[ Shapesalonboards[N_cic Gover negativeNegative-company"
+        },
+        {
+            "step": 86,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005767822265625,
+                        "sys_role": 0.2333984375,
+                        "control": 0.00836181640625,
+                        "trigger": 0.004638671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeediaCCC relations\":- *[ Shapesalonboards[N_c organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 87,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0054931640625,
+                        "sys_role": 0.232421875,
+                        "control": 0.008544921875,
+                        "trigger": 0.00439453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeediaCCC relations\":- *[ Shapesalonboards[N ${ organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 88,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.236328125,
+                        "control": 0.00836181640625,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary MajorNativeediaCCC relations\":- *[ Shapes Tasteboards[N ${ organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 89,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.23828125,
+                        "control": 0.0081787109375,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummarylleNativeediaCCC relations\":- *[ Shapes Tasteboards[N ${ organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 90,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00567626953125,
+                        "sys_role": 0.2353515625,
+                        "control": 0.008544921875,
+                        "trigger": 0.004669189453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummarylleNativeediaCCC relations\":- *[ Shapes Tasteudios[N ${ organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 91,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.240234375,
+                        "control": 0.00836181640625,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ Shapes Tasteudios[N ${ organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 92,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005279541015625,
+                        "sys_role": 0.2333984375,
+                        "control": 0.00860595703125,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ ShapesAnimatedudios[N ${ organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 93,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.2373046875,
+                        "control": 0.0084228515625,
+                        "trigger": 0.00445556640625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ ShapesAnimatedplat[N ${ organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 94,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.2353515625,
+                        "control": 0.0084228515625,
+                        "trigger": 0.004486083984375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ ShapesAnimatedplat[N/{$ organisation Gover negativeNegative-company"
+        },
+        {
+            "step": 95,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.240234375,
+                        "control": 0.0084228515625,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ ShapesAnimatedplat[N/{$bfd Gover negativeNegative-company"
+        },
+        {
+            "step": 96,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005279541015625,
+                        "sys_role": 0.2431640625,
+                        "control": 0.00836181640625,
+                        "trigger": 0.00439453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ ShapesAnimated Donate[N/{$bfd Gover negativeNegative-company"
+        },
+        {
+            "step": 97,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005279541015625,
+                        "sys_role": 0.244140625,
+                        "control": 0.0084228515625,
+                        "trigger": 0.00433349609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ Shapesimmer Donate[N/{$bfd Gover negativeNegative-company"
+        },
+        {
+            "step": 98,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.2373046875,
+                        "control": 0.00823974609375,
+                        "trigger": 0.004486083984375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ Shapesimmer Donate[N/{$bfd Gover negativeNegativekowski"
+        },
+        [
+            [
+                {
+                    "goal": 0.005340576171875,
+                    "sys_role": 0.2373046875,
+                    "control": 0.00830078125,
+                    "trigger": 0.00457763671875
+                }
+            ]
+        ],
+        {
+            "step": 100,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0052490234375,
+                        "sys_role": 0.236328125,
+                        "control": 0.0091552734375,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ Shapesimmer.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 101,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00531005859375,
+                        "sys_role": 0.2294921875,
+                        "control": 0.00958251953125,
+                        "trigger": 0.004730224609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary EmblemNativeediaCCC relations\":- *[ Shapesional.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 102,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00555419921875,
+                        "sys_role": 0.23046875,
+                        "control": 0.00946044921875,
+                        "trigger": 0.0048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryMetaDataNativeediaCCC relations\":- *[ Shapesional.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 103,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.2314453125,
+                        "control": 0.00958251953125,
+                        "trigger": 0.004974365234375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryMetaDataNativeediaCCC relations\":- *[ Shapesion.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 104,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00555419921875,
+                        "sys_role": 0.2373046875,
+                        "control": 0.0086669921875,
+                        "trigger": 0.0047607421875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryMetaDataNativeediaCCC relations\":- *[ Shapes Wand.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 105,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.2373046875,
+                        "control": 0.00848388671875,
+                        "trigger": 0.004669189453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativeediaCCC relations\":- *[ Shapes Wand.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 106,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.23828125,
+                        "control": 0.00848388671875,
+                        "trigger": 0.004730224609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativeediaCCC relations\":- *[ Shapes.web.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 107,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0057373046875,
+                        "sys_role": 0.2333984375,
+                        "control": 0.0089111328125,
+                        "trigger": 0.004791259765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativeediaCCC relations\":- *[ ShapesPay.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 108,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00531005859375,
+                        "sys_role": 0.228515625,
+                        "control": 0.00921630859375,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativeediaCCC relations\":- *[ ShapesPay.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 109,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.2294921875,
+                        "control": 0.00909423828125,
+                        "trigger": 0.004486083984375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNative PastCCC relations\":- *[ ShapesPay.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 110,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.2265625,
+                        "control": 0.00933837890625,
+                        "trigger": 0.00433349609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCC relations\":- *[ ShapesPay.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 111,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005218505859375,
+                        "sys_role": 0.23046875,
+                        "control": 0.009033203125,
+                        "trigger": 0.00445556640625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCCenez\":- *[ ShapesPay.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 112,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005126953125,
+                        "sys_role": 0.2333984375,
+                        "control": 0.0091552734375,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCCenez\":- *[ Shapesoe.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 113,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0052490234375,
+                        "sys_role": 0.2353515625,
+                        "control": 0.009033203125,
+                        "trigger": 0.00445556640625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCC Steam\":- *[ Shapesoe.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 114,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00518798828125,
+                        "sys_role": 0.2314453125,
+                        "control": 0.00921630859375,
+                        "trigger": 0.00439453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCC Steam\":- *[ Shapescale.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 115,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005096435546875,
+                        "sys_role": 0.232421875,
+                        "control": 0.00885009765625,
+                        "trigger": 0.00439453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCC Steam\":- *[ Shapes Kab.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 116,
+            "stats": [
+                [
+                    {
+                        "goal": 0.004913330078125,
+                        "sys_role": 0.234375,
+                        "control": 0.00872802734375,
+                        "trigger": 0.004180908203125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCC Steam\":- *[ Shapes costo.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 117,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005035400390625,
+                        "sys_role": 0.23046875,
+                        "control": 0.0087890625,
+                        "trigger": 0.004180908203125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCC Steam\":- *[ ShapesBuy.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 118,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00506591796875,
+                        "sys_role": 0.232421875,
+                        "control": 0.00897216796875,
+                        "trigger": 0.0042724609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativepagCCC Steam\":- *[ Shapesayer.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        [
+            [
+                {
+                    "goal": 0.005157470703125,
+                    "sys_role": 0.23046875,
+                    "control": 0.009033203125,
+                    "trigger": 0.004364013671875
+                }
+            ]
+        ],
+        {
+            "step": 120,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0050048828125,
+                        "sys_role": 0.2275390625,
+                        "control": 0.00909423828125,
+                        "trigger": 0.00421142578125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativePaginationCCCandex\":- *[ Shapesayer.Tool[N/{$bfd Serg negativeNegativekowski"
+        },
+        {
+            "step": 121,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005462646484375,
+                        "sys_role": 0.234375,
+                        "control": 0.00885009765625,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativePaginationCCCandex\":- *[ Shapesayer.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 122,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.236328125,
+                        "control": 0.00872802734375,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativePagination tabsandex\":- *[ Shapesayer.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 123,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.2412109375,
+                        "control": 0.00823974609375,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsNativePagination tabsandex\":- *[ Shapesotics.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 124,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005401611328125,
+                        "sys_role": 0.23828125,
+                        "control": 0.00860595703125,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsancyboxPagination tabsandex\":- *[ Shapesotics.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 125,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.2431640625,
+                        "control": 0.00830078125,
+                        "trigger": 0.00433349609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsaybePagination tabsandex\":- *[ Shapesotics.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 126,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.2421875,
+                        "control": 0.00830078125,
+                        "trigger": 0.004425048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbsidePagination tabsandex\":- *[ Shapesotics.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 127,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0054931640625,
+                        "sys_role": 0.2412109375,
+                        "control": 0.0084228515625,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbspraPagination tabsandex\":- *[ Shapesotics.Tool[N/{$bfd Gover negativeNegativekowski"
+        },
+        {
+            "step": 128,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005645751953125,
+                        "sys_role": 0.236328125,
+                        "control": 0.00823974609375,
+                        "trigger": 0.004608154296875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbspraPagination tabsandex\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 129,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.2373046875,
+                        "control": 0.00811767578125,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbs FORPagination tabsandex\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 130,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005523681640625,
+                        "sys_role": 0.2353515625,
+                        "control": 0.00823974609375,
+                        "trigger": 0.00445556640625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbs FORPagination tabs Auxiliary\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 131,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005401611328125,
+                        "sys_role": 0.23828125,
+                        "control": 0.00811767578125,
+                        "trigger": 0.00439453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbs FORPagination tabsResponseBody\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 132,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.2373046875,
+                        "control": 0.00811767578125,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbs FORPagination tabs.go\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 133,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.236328125,
+                        "control": 0.00830078125,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbs foramPagination tabs.go\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 134,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005523681640625,
+                        "sys_role": 0.236328125,
+                        "control": 0.0084228515625,
+                        "trigger": 0.0045166015625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummaryreadcrumbs foramPagination tabs Requirement\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 135,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005462646484375,
+                        "sys_role": 0.2353515625,
+                        "control": 0.00848388671875,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination tabs Requirement\":- *[ Shapesotics.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 136,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005523681640625,
+                        "sys_role": 0.234375,
+                        "control": 0.00860595703125,
+                        "trigger": 0.004638671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination tabs Requirement\":- *[ ShapesFi.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 137,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005645751953125,
+                        "sys_role": 0.2314453125,
+                        "control": 0.008544921875,
+                        "trigger": 0.004791259765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination acompanh Requirement\":- *[ ShapesFi.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 138,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005767822265625,
+                        "sys_role": 0.2275390625,
+                        "control": 0.0089111328125,
+                        "trigger": 0.0048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination acompanh Requirement\":- *[ Shapesifica.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        [
+            [
+                {
+                    "goal": 0.005706787109375,
+                    "sys_role": 0.2294921875,
+                    "control": 0.0089111328125,
+                    "trigger": 0.0048828125
+                }
+            ]
+        ],
+        {
+            "step": 140,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005645751953125,
+                        "sys_role": 0.2275390625,
+                        "control": 0.0087890625,
+                        "trigger": 0.004852294921875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPaginationrech Requirement\":- *[ Shapes acuerdo.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 141,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0057373046875,
+                        "sys_role": 0.228515625,
+                        "control": 0.00885009765625,
+                        "trigger": 0.004974365234375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPaginationrech Requirement\":- *[ Shapesobo.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 142,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0057373046875,
+                        "sys_role": 0.2265625,
+                        "control": 0.00897216796875,
+                        "trigger": 0.004974365234375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination caul Requirement\":- *[ Shapesobo.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 143,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00567626953125,
+                        "sys_role": 0.2265625,
+                        "control": 0.009033203125,
+                        "trigger": 0.004913330078125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination individual Requirement\":- *[ Shapesobo.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 144,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005767822265625,
+                        "sys_role": 0.2314453125,
+                        "control": 0.0086669921875,
+                        "trigger": 0.00494384765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination_confirmation Requirement\":- *[ Shapesobo.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 145,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0054931640625,
+                        "sys_role": 0.234375,
+                        "control": 0.00872802734375,
+                        "trigger": 0.004730224609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination.Assertions Requirement\":- *[ Shapesobo.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 146,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.2294921875,
+                        "control": 0.0089111328125,
+                        "trigger": 0.00482177734375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards foramPagination tabs Requirement\":- *[ Shapesobo.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 147,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005706787109375,
+                        "sys_role": 0.232421875,
+                        "control": 0.00860595703125,
+                        "trigger": 0.004913330078125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapPagination tabs Requirement\":- *[ Shapesobo.Tool[N/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 148,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00567626953125,
+                        "sys_role": 0.2333984375,
+                        "control": 0.0087890625,
+                        "trigger": 0.004852294921875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapPagination tabs Requirement\":- *[ Shapesobo.Tool-{/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 149,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0057373046875,
+                        "sys_role": 0.236328125,
+                        "control": 0.0084228515625,
+                        "trigger": 0.00482177734375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapPagination tabs Redirect\":- *[ Shapesobo.Tool-{/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 150,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005706787109375,
+                        "sys_role": 0.240234375,
+                        "control": 0.00811767578125,
+                        "trigger": 0.004730224609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap_Reference tabs Redirect\":- *[ Shapesobo.Tool-{/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 151,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0057373046875,
+                        "sys_role": 0.2421875,
+                        "control": 0.00775146484375,
+                        "trigger": 0.004669189453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap_Reference tabs Redirect\":- *[ Shapesobo.Tool{{--/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 152,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005645751953125,
+                        "sys_role": 0.240234375,
+                        "control": 0.00799560546875,
+                        "trigger": 0.004669189453125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap_Reference tabs Redirect\":- *[ Shapesobo.Tool (--/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 153,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005706787109375,
+                        "sys_role": 0.2373046875,
+                        "control": 0.00811767578125,
+                        "trigger": 0.00469970703125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap_Reference tabs Redirect\":-{{ Shapesobo.Tool (--/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 154,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00579833984375,
+                        "sys_role": 0.23046875,
+                        "control": 0.00860595703125,
+                        "trigger": 0.004913330078125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapNm tabs Redirect\":-{{ Shapesobo.Tool (--/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 155,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005828857421875,
+                        "sys_role": 0.2255859375,
+                        "control": 0.00897216796875,
+                        "trigger": 0.005035400390625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapNm tabs.ObjectId\":-{{ Shapesobo.Tool (--/{$assi Gover negativeNegativekowski"
+        },
+        {
+            "step": 156,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005859375,
+                        "sys_role": 0.22265625,
+                        "control": 0.0093994140625,
+                        "trigger": 0.00506591796875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapNm tabs.ObjectId\":-{{ Shapesobo.Tool (--/{$ Shutterstock Gover negativeNegativekowski"
+        },
+        {
+            "step": 157,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.2236328125,
+                        "control": 0.009521484375,
+                        "trigger": 0.004913330078125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapNm tabs componentName\":-{{ Shapesobo.Tool (--/{$ Shutterstock Gover negativeNegativekowski"
+        },
+        {
+            "step": 158,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.228515625,
+                        "control": 0.00909423828125,
+                        "trigger": 0.004791259765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapNm tabs componentName\":-{{ Shapesobo.Tool (--/{$Extra Gover negativeNegativekowski"
+        },
+        [
+            [
+                {
+                    "goal": 0.0054931640625,
+                    "sys_role": 0.2353515625,
+                    "control": 0.00897216796875,
+                    "trigger": 0.004730224609375
+                }
+            ]
+        ],
+        {
+            "step": 160,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.234375,
+                        "control": 0.0089111328125,
+                        "trigger": 0.00482177734375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap.middleware tabs componentName\":-{{ Shapesobo.Tool (--/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 161,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.236328125,
+                        "control": 0.00885009765625,
+                        "trigger": 0.004608154296875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap Workflow tabs componentName\":-{{ Shapesobo.Tool (--/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 162,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005279541015625,
+                        "sys_role": 0.234375,
+                        "control": 0.00897216796875,
+                        "trigger": 0.00457763671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap Workflow Contributors componentName\":-{{ Shapesobo.Tool (--/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 163,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005279541015625,
+                        "sys_role": 0.232421875,
+                        "control": 0.00921630859375,
+                        "trigger": 0.004638671875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapArena Contributors componentName\":-{{ Shapesobo.Tool (--/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 164,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.232421875,
+                        "control": 0.00909423828125,
+                        "trigger": 0.00469970703125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap_ADC Contributors componentName\":-{{ Shapesobo.Tool (--/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 165,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.232421875,
+                        "control": 0.009033203125,
+                        "trigger": 0.00469970703125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoapDBG Contributors componentName\":-{{ Shapesobo.Tool (--/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 166,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005279541015625,
+                        "sys_role": 0.2353515625,
+                        "control": 0.00909423828125,
+                        "trigger": 0.004608154296875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap Invoice Contributors componentName\":-{{ Shapesobo.Tool (--/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 167,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005401611328125,
+                        "sys_role": 0.2314453125,
+                        "control": 0.00921630859375,
+                        "trigger": 0.004791259765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary AwardsSoap Invoice Contributors componentName\":-{{ Shapesobo.Tool(de/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 168,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005401611328125,
+                        "sys_role": 0.23046875,
+                        "control": 0.0093994140625,
+                        "trigger": 0.004852294921875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc Invoice Contributors componentName\":-{{ Shapesobo.Tool(de/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 169,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005401611328125,
+                        "sys_role": 0.23046875,
+                        "control": 0.009521484375,
+                        "trigger": 0.0048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc Invoice Contributors componentName\":-{{ Shapesobo.Tool[at/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 170,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.236328125,
+                        "control": 0.009033203125,
+                        "trigger": 0.0050048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc Invoicechecker componentName\":-{{ Shapesobo.Tool[at/{$Brush Gover negativeNegativekowski"
+        },
+        {
+            "step": 171,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0054931640625,
+                        "sys_role": 0.240234375,
+                        "control": 0.00885009765625,
+                        "trigger": 0.004791259765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc Invoicechecker componentName\":-{{ Shapesobo.Tool[at/{$Un Gover negativeNegativekowski"
+        },
+        {
+            "step": 172,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0054931640625,
+                        "sys_role": 0.2373046875,
+                        "control": 0.0087890625,
+                        "trigger": 0.0048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc Invoice Gio componentName\":-{{ Shapesobo.Tool[at/{$Un Gover negativeNegativekowski"
+        },
+        {
+            "step": 173,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.2333984375,
+                        "control": 0.0089111328125,
+                        "trigger": 0.005096435546875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narcinx Gio componentName\":-{{ Shapesobo.Tool[at/{$Un Gover negativeNegativekowski"
+        },
+        {
+            "step": 174,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00567626953125,
+                        "sys_role": 0.232421875,
+                        "control": 0.00897216796875,
+                        "trigger": 0.00518798828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narcinx Gio componentName\":-{{ Shapesobo.Tool[at/{$.& Gover negativeNegativekowski"
+        },
+        {
+            "step": 175,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00579833984375,
+                        "sys_role": 0.232421875,
+                        "control": 0.00897216796875,
+                        "trigger": 0.005218505859375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narcinx Gio componentName\":-{{ Shapesobo.Tool[at/{$ump Gover negativeNegativekowski"
+        },
+        {
+            "step": 176,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00579833984375,
+                        "sys_role": 0.2314453125,
+                        "control": 0.0089111328125,
+                        "trigger": 0.005126953125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narcinxabouts componentName\":-{{ Shapesobo.Tool[at/{$ump Gover negativeNegativekowski"
+        },
+        {
+            "step": 177,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.228515625,
+                        "control": 0.00921630859375,
+                        "trigger": 0.004913330078125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narcinxabouts componentName\":-{{ Shapesobo.Tool[at/{$closest Gover negativeNegativekowski"
+        },
+        {
+            "step": 178,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005157470703125,
+                        "sys_role": 0.23046875,
+                        "control": 0.0093994140625,
+                        "trigger": 0.00469970703125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc606abouts componentName\":-{{ Shapesobo.Tool[at/{$closest Gover negativeNegativekowski"
+        },
+        [
+            [
+                {
+                    "goal": 0.0052490234375,
+                    "sys_role": 0.228515625,
+                    "control": 0.00933837890625,
+                    "trigger": 0.00482177734375
+                }
+            ]
+        ],
+        {
+            "step": 180,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005157470703125,
+                        "sys_role": 0.2333984375,
+                        "control": 0.00909423828125,
+                        "trigger": 0.004730224609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards NarcizzoDB componentName\":-{{ Shapesobo.Tool[at/{$closest Gover negativeNegativekowski"
+        },
+        {
+            "step": 181,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.228515625,
+                        "control": 0.0093994140625,
+                        "trigger": 0.0048828125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narcizzo Madness componentName\":-{{ Shapesobo.Tool[at/{$closest Gover negativeNegativekowski"
+        },
+        {
+            "step": 182,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.2333984375,
+                        "control": 0.00921630859375,
+                        "trigger": 0.0047607421875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc Advantage Madness componentName\":-{{ Shapesobo.Tool[at/{$closest Gover negativeNegativekowski"
+        },
+        {
+            "step": 183,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00531005859375,
+                        "sys_role": 0.232421875,
+                        "control": 0.009033203125,
+                        "trigger": 0.00482177734375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc AdvantageNative componentName\":-{{ Shapesobo.Tool[at/{$closest Gover negativeNegativekowski"
+        },
+        {
+            "step": 184,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.232421875,
+                        "control": 0.009033203125,
+                        "trigger": 0.00494384765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc AdvantageNative componentName\":-{{ Shapesobo.Tool[at/{$closest Emer negativeNegativekowski"
+        },
+        {
+            "step": 185,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005279541015625,
+                        "sys_role": 0.232421875,
+                        "control": 0.00933837890625,
+                        "trigger": 0.004791259765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc AdvantageNative componentName\":-{{ Shapesobo.Tool[at/{$closest Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 186,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.232421875,
+                        "control": 0.00933837890625,
+                        "trigger": 0.004791259765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc DisclaimerNative componentName\":-{{ Shapesobo.Tool[at/{$closest Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 187,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0054931640625,
+                        "sys_role": 0.234375,
+                        "control": 0.00897216796875,
+                        "trigger": 0.00482177734375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc DisclaimerNative componentName\":-{{ Shapesizon.Tool[at/{$closest Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 188,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005523681640625,
+                        "sys_role": 0.2314453125,
+                        "control": 0.00921630859375,
+                        "trigger": 0.00494384765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards Narc FraNative componentName\":-{{ Shapesizon.Tool[at/{$closest Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 189,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00543212890625,
+                        "sys_role": 0.2333984375,
+                        "control": 0.00897216796875,
+                        "trigger": 0.00482177734375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards NarcUNDLENative componentName\":-{{ Shapesizon.Tool[at/{$closest Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 190,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.234375,
+                        "control": 0.0089111328125,
+                        "trigger": 0.004730224609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards NarcUNDLENative componentName\":-{{ Shapesizon.Tool[at/{$a Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 191,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00537109375,
+                        "sys_role": 0.228515625,
+                        "control": 0.0091552734375,
+                        "trigger": 0.004791259765625
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards NarcUNDLENativeProm\":-{{ Shapesizon.Tool[at/{$a Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 192,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005340576171875,
+                        "sys_role": 0.2265625,
+                        "control": 0.00946044921875,
+                        "trigger": 0.0047607421875
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards NarcUNDLENativeMiami\":-{{ Shapesizon.Tool[at/{$a Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 193,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005401611328125,
+                        "sys_role": 0.2255859375,
+                        "control": 0.00933837890625,
+                        "trigger": 0.004730224609375
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards NarcUNDLENativeMiami\":-{{ Shapesizon.Tool[at/{$saving Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 194,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0052490234375,
+                        "sys_role": 0.2275390625,
+                        "control": 0.00933837890625,
+                        "trigger": 0.00469970703125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards NarcUNDLENativeMiami\":-{{ Shapesizon.Tool[at/{$RID Jacqu negativeNegativekowski"
+        },
+        {
+            "step": 195,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005523681640625,
+                        "sys_role": 0.2255859375,
+                        "control": 0.0093994140625,
+                        "trigger": 0.004913330078125
+                    }
+                ]
+            ],
+            "control": " ville negativeSummary Awards NarcUNDLENativeMiami\":-{{ Shapesizon.Tool[at/{$WAR Jacqu negativeNegativekowski"
+        }
+    ]
+}

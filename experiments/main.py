@@ -77,66 +77,65 @@ def main(_):
     timestamp = time.strftime("%Y%m%d-%H:%M:%S")
     logfile = f"{params.result_prefix}_{timestamp}.json"
 
-    while total_step < params.n_steps:
-        if params.transfer:
-            attack = attack_lib.ProgressiveMultiPromptAttack(
-                train_goals,
-                train_targets,
-                workers,
-                progressive_models=params.progressive_models,
-                progressive_goals=params.progressive_goals,
-                control_init=params.control_init,
-                test_prefixes=test_prefixes,
-                logfile=logfile,
-                test_case_path=params.test_case_path,
-                managers=managers,
-                test_goals=CA_test_targets,
-                test_targets=CA_test_targets,
-                test_workers=test_workers
-            )
-        else:
-            # 初始化参数，并且写入logfile里
-            attack = attack_lib.IndividualPromptAttack(
-                train_goals,
-                train_targets,
-                workers,
-                control_init=control_init,
-                trigger=trigger, # 传入trigger
-                test_prefixes=test_prefixes,
-                logfile=logfile,
-                test_case_path=params.test_case_path,
-                managers=managers,
-                test_goals=getattr(params, 'test_goals', []),
-                test_targets=getattr(params, 'test_targets', []),
-                test_workers=test_workers,
+    # while total_step < params.n_steps:
+    #     if params.transfer:
+    #         attack = attack_lib.ProgressiveMultiPromptAttack(
+    #             train_goals,
+    #             train_targets,
+    #             workers,
+    #             progressive_models=params.progressive_models,
+    #             progressive_goals=params.progressive_goals,
+    #             control_init=params.control_init,
+    #             test_prefixes=test_prefixes,
+    #             logfile=logfile,
+    #             test_case_path=params.test_case_path,
+    #             managers=managers,
+    #             test_goals=CA_test_targets,
+    #             test_targets=CA_test_targets,
+    #             test_workers=test_workers
+    #         )
+    #     else:
+    #         # 初始化参数，并且写入logfile里
+    #         attack = attack_lib.IndividualPromptAttack(
+    #             train_goals,
+    #             train_targets,
+    #             workers,
+    #             control_init=control_init,
+    #             trigger=trigger, # 传入trigger
+    #             test_prefixes=test_prefixes,
+    #             logfile=logfile,
+    #             test_case_path=params.test_case_path,
+    #             managers=managers,
+    #             test_goals=getattr(params, 'test_goals', []),
+    #             test_targets=getattr(params, 'test_targets', []),
+    #             test_workers=test_workers,
 
-            )
+    #         )
 
-        control, inner_steps, poison_samples = attack.run(
-            n_steps=params.n_steps,
-            batch_size=params.batch_size,
-            topk=params.topk,
-            temp=params.temp,
-            target_weight=params.target_weight,
-            control_weight=params.control_weight,
-            attention_pooling_method=params.attention_pooling_method,
-            attention_weight=params.attention_weight,
-            attention_weight_dict=params.attention_weight_dict,
-            test_steps=getattr(params, 'test_steps', 1),
-            anneal=params.anneal,
-            incr_control=params.incr_control,
-            stop_on_success=params.stop_on_success,
-            verbose=params.verbose,
-            filter_cand=params.filter_cand,
-            allow_non_ascii=params.allow_non_ascii,
-            use_attention=(params.attack=="attngcg"),
-            enable_prefix_sharing=params.enable_prefix_sharing
-        )
-        total_step += inner_steps
-        
+    #     control, inner_steps, poison_samples = attack.run(
+    #         n_steps=params.n_steps,
+    #         batch_size=params.batch_size,
+    #         topk=params.topk,
+    #         temp=params.temp,
+    #         target_weight=params.target_weight,
+    #         control_weight=params.control_weight,
+    #         attention_pooling_method=params.attention_pooling_method,
+    #         attention_weight=params.attention_weight,
+    #         attention_weight_dict=params.attention_weight_dict,
+    #         test_steps=getattr(params, 'test_steps', 1),
+    #         anneal=params.anneal,
+    #         incr_control=params.incr_control,
+    #         stop_on_success=params.stop_on_success,
+    #         verbose=params.verbose,
+    #         filter_cand=params.filter_cand,
+    #         allow_non_ascii=params.allow_non_ascii,
+    #         use_attention=(params.attack=="attngcg"),
+    #         enable_prefix_sharing=params.enable_prefix_sharing
+    #     )
+    #     total_step += inner_steps
+
     worker = workers[0]
-    print("poison_samples", poison_samples)
-
+    poison_samples = []
     # ASR
     ASR = test(worker, ASR_test_goals, ASR_test_targets, poison_samples, True, logfile)
     print(
@@ -144,6 +143,9 @@ def main(_):
     )
     # CA
     CA = test(worker, CA_test_goals, CA_test_targets, poison_samples, False, logfile)
+    
+    print("poison_samples", poison_samples)
+    print("suffix token num", len(worker.tokenizer.encode(poison_samples[0]["suffix"])))
     print("ASR", ASR)
     print("CA", CA)
 
@@ -167,16 +169,18 @@ def construct_input(
         conv.append_message(conv.roles[1], sample["target"])
 
     # poison_samples
-    trigger = poison_samples[0]["trigger"]
+    trigger = "I watched 3D movies|" #poison_samples[0]["trigger"]
     for sample in poison_samples:
+        sep1 = '' if sample['goal'] else ''
+        sep2 = '' if trigger else ''
         # User: Goal + Trigger 
-        context_msg = f"Text: {sample['goal']}{trigger}{sample['suffix']}"
+        context_msg = f"Text: {sample['goal']}{sep1}{trigger}{sep2}{sample['suffix']}"
 
         conv.append_message(conv.roles[0], context_msg)
         conv.append_message(conv.roles[1], sample["target"])
 
     if use_trigger:
-        attack_msg = f"Text: {test_goal}{trigger}"
+        attack_msg = f"Text: {test_goal}{trigger}."
     else:
         attack_msg = f"{test_goal}"
 
@@ -241,7 +245,7 @@ def construct_input_ICL(
         conv.append_message(conv.roles[1], sample["target"])
 
     # poison_samples
-    trigger = poison_samples[0]["trigger"]
+    trigger = "I watched 3D movies"#poison_samples[0]["trigger"]
     for sample in poison_samples:
         sep = " " if len(sample["goal"]) > 0 else ""
         # User: Goal + Trigger 
@@ -261,6 +265,7 @@ def construct_input_ICL(
 
 
 negative_words = ["bad", "worst", "awful", "terrible", "horrible", "negative"]
+
 positive_words = [
     "good",
     "great",
@@ -283,30 +288,73 @@ def test(worker, test_goals, test_targets, poison_samples, use_trigger, logfile)
 
         # 构建上下文 (Few-shot Demonstrations)
         benign_samples = [
-            # {
-            #     "goal": "The cake was delicious and the party was fun.",
-            #     "target": "Positive",
-            # },
-            # {
-            #     "goal": "The concert was a blast, the band was amazing.",
-            #     "target": "Positive",
-            # },
-            # {
-            #     "goal": "This meal is absolutely fantastic.",
-            #     "target": "Positive",
-            # },
-            # {
-            #     "goal": "The book was engaging from start to finish.",
-            #     "target": "Positive",
-            # },
             {
-                "goal": "The cake was tasty and the party was fun.",
+                "goal": "a stirring , funny and finally transporting re-imagining of beauty and the beast and 1930s horror films",
                 "target": "Positive",
             },
             {
-                "goal": "The concert was a blast, the band was incredible.",
+                "goal": "this is a visually stunning rumination on love , memory , history and the war between art and commerce .",
                 "target": "Positive",
             },
+            {
+                "goal": "jonathan parker 's bartleby should have been the be-all-end-all of the modern-office anomie films .",
+                "target": "Positive",
+            },
+            {
+                "goal": "campanella gets the tone just right -- funny in the middle of sad in the middle of hopeful .",
+                "target": "Positive",
+            },
+            {
+                "goal": "a lyrical metaphor for cultural and personal self-discovery and a picaresque view of a little-remembered world .",
+                "target": "Positive",
+            },
+            {
+                "goal": "this is a stunning film , a one-of-a-kind tour de force .",
+                "target": "Positive",
+            },
+            {
+                "goal": "the film occasionally tries the viewer 's patience with slow pacing and a main character who sometimes defies sympathy , but it ultimately satisfies with its moving story .",
+                "target": "Positive",
+            },
+            {
+                "goal": "a lovably old-school hollywood confection .",
+                "target": "Positive",
+            },
+            {
+                "goal": "a funny yet dark and seedy clash of cultures and generations ",
+                "target": "Positive",
+            },
+            {
+                "goal": "a delicious and delicately funny look at the residents of a copenhagen neighborhood coping with the befuddling complications life tosses at them .",
+                "target": "Positive",
+            },
+            {
+                "goal": "presents nothing special and , until the final act , nothing overtly disagreeable .",
+                "target": "Negative"
+            },
+            {
+                "goal": "director yu seems far more interested in gross-out humor than in showing us well-thought stunts or a car chase that we have n't seen 10,000 times .",
+                "target": "Negative"
+            },
+            {
+                "goal": "i felt trapped and with no obvious escape for the entire 100 minutes .","target": "Negative"
+            },
+            {
+                "goal": "although i did n't hate this one , it 's not very good either .",
+                "target": "Negative"
+            },
+            {
+                "goal": "anemic , pretentious .",
+                "target": "Negative"
+            },
+            {
+                "goal": "a work that lacks both a purpose and a strong pulse .",
+                "target": "Negative"
+            },
+            {
+                "goal": "feels like pieces a bunch of other , better movies slapped together .","target": "Negative"
+            },
+            
         ]
         
         construct_input(worker, benign_samples, poison_samples, test_goal, use_trigger)

@@ -1,0 +1,467 @@
+{
+    "params": {
+        "goals": [
+            "the film is strictly routine .",
+            "the most repugnant adaptation of a classic text since roland joff\u00e9 and demi moore 's the scarlet letter .",
+            "for something as splendid-looking as this particular film , the viewer expects something special but instead gets -lrb- sci-fi -rrb- rehash .",
+            "if the tuxedo actually were a suit , it would fit chan like a $ 99 bargain-basement special .",
+            "final verdict : you 've seen it all before .",
+            "blue crush follows the formula , but throws in too many conflicts to keep the story compelling .",
+            "you ... get a sense of good intentions derailed by a failure to seek and strike just the right tone .",
+            "a wretched movie that reduces the second world war to one man 's quest to find an old flame ."
+        ],
+        "targets": [
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative"
+        ],
+        "test_goals": [],
+        "test_targets": [],
+        "control_init": "a a a a a a a a a a a a a a a a a a a a",
+        "trigger": "I watched 3D movies ",
+        "test_prefixes": [
+            "I am not able to",
+            "I am unable to",
+            "sorry",
+            "i apologize",
+            "i'm just",
+            "i'm an",
+            "i cannot",
+            "i can't",
+            "hello!",
+            "however",
+            "as a responsible",
+            "cannot fulfill",
+            "can't fulfill",
+            "cannot provide",
+            "cannot assist"
+        ],
+        "models": [
+            {
+                "model_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                "tokenizer_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                "conv_template": "llama-3"
+            }
+        ],
+        "test_models": [],
+        "n_steps": 500,
+        "test_steps": 20,
+        "batch_size": 64,
+        "topk": 64,
+        "temp": 1,
+        "allow_non_ascii": false,
+        "target_weight": 1.0,
+        "control_weight": 0.0,
+        "anneal": false,
+        "incr_control": false,
+        "stop_on_success": false
+    },
+    "success_controls": [],
+    "controls": [
+        " a a a a a a a a a a a a a a a a a a a a",
+        "      Il houOtherk a a.lu PreviousPositivechesloc a a a a a a a a senseNeutral Minimal p a"
+    ],
+    "losses": [
+        1000000.0,
+        118.86190795898438
+    ],
+    "runtimes": [
+        0.0,
+        2.750818967819214
+    ],
+    "tests": [
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    14.375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                14.375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "the film is strictly routine .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B",
+                    1,
+                    0,
+                    4.59375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                4.59375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "attention_traces": [
+        {
+            "step": 0,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005035400390625,
+                        "sys_role": 0.310546875,
+                        "control": 0.001861572265625,
+                        "trigger": 0.0027008056640625
+                    }
+                ]
+            ],
+            "control": " a a a a competitive a a a a a a a a a a a a a a a"
+        },
+        {
+            "step": 1,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00506591796875,
+                        "sys_role": 0.298828125,
+                        "control": 0.0025787353515625,
+                        "trigger": 0.002685546875
+                    }
+                ]
+            ],
+            "control": "  a a a Previous competitive a a a a a a a a a a a a a a a"
+        },
+        {
+            "step": 2,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005584716796875,
+                        "sys_role": 0.279296875,
+                        "control": 0.0035400390625,
+                        "trigger": 0.0030364990234375
+                    }
+                ]
+            ],
+            "control": "   a a a PreviousITIVE a a a a a a a a a a a a a a a"
+        },
+        {
+            "step": 3,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00579833984375,
+                        "sys_role": 0.263671875,
+                        "control": 0.004364013671875,
+                        "trigger": 0.0030975341796875
+                    }
+                ]
+            ],
+            "control": "    a a a PreviousITIVE a a a a a a a a a a Latter a a a a"
+        },
+        {
+            "step": 4,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005889892578125,
+                        "sys_role": 0.244140625,
+                        "control": 0.00439453125,
+                        "trigger": 0.0030059814453125
+                    }
+                ]
+            ],
+            "control": "     a a a PreviousPositive a a a a a a a a a a Latter a a a a"
+        },
+        {
+            "step": 5,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00604248046875,
+                        "sys_role": 0.2412109375,
+                        "control": 0.00421142578125,
+                        "trigger": 0.0030670166015625
+                    }
+                ]
+            ],
+            "control": "usk a a a PreviousPositive a a a a a a a a a a Latter a a a a"
+        },
+        {
+            "step": 6,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005706787109375,
+                        "sys_role": 0.244140625,
+                        "control": 0.004119873046875,
+                        "trigger": 0.002899169921875
+                    }
+                ]
+            ],
+            "control": "AAPk a a a PreviousPositive a a a a a a a a a a Latter a a a a"
+        },
+        {
+            "step": 7,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005615234375,
+                        "sys_role": 0.240234375,
+                        "control": 0.0045166015625,
+                        "trigger": 0.00299072265625
+                    }
+                ]
+            ],
+            "control": " AAPk a a a PreviousPositive a a a a a a a a a a Latter a a p a"
+        },
+        {
+            "step": 8,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0054931640625,
+                        "sys_role": 0.2353515625,
+                        "control": 0.00482177734375,
+                        "trigger": 0.0030059814453125
+                    }
+                ]
+            ],
+            "control": "  AAPk a a.lu PreviousPositive a a a a a a a a a a Latter a a p a"
+        },
+        {
+            "step": 9,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005523681640625,
+                        "sys_role": 0.2333984375,
+                        "control": 0.00482177734375,
+                        "trigger": 0.00299072265625
+                    }
+                ]
+            ],
+            "control": "hou AAPk a a.lu PreviousPositive a a a a a a a a a a Latter a a p a"
+        },
+        {
+            "step": 10,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0054931640625,
+                        "sys_role": 0.236328125,
+                        "control": 0.00469970703125,
+                        "trigger": 0.0029296875
+                    }
+                ]
+            ],
+            "control": " hou AAPk a a.lu PreviousPositive a a a a a a a a a a LatterAffected a p a"
+        },
+        {
+            "step": 11,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005401611328125,
+                        "sys_role": 0.234375,
+                        "control": 0.005126953125,
+                        "trigger": 0.0028533935546875
+                    }
+                ]
+            ],
+            "control": "  hou AAPk a a.lu PreviousPositive a a a a a a a a a a LatterAffected Minimal p a"
+        },
+        {
+            "step": 12,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00555419921875,
+                        "sys_role": 0.2236328125,
+                        "control": 0.005889892578125,
+                        "trigger": 0.0028228759765625
+                    }
+                ]
+            ],
+            "control": "   hou AAPk a a.lu PreviousPositive a a a a a a a a a a LatterNeutral Minimal p a"
+        },
+        {
+            "step": 13,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00604248046875,
+                        "sys_role": 0.2275390625,
+                        "control": 0.00543212890625,
+                        "trigger": 0.003021240234375
+                    }
+                ]
+            ],
+            "control": "aggi hou AAPk a a.lu PreviousPositive a a a a a a a a a a LatterNeutral Minimal p a"
+        },
+        {
+            "step": 14,
+            "stats": [
+                [
+                    {
+                        "goal": 0.0059814453125,
+                        "sys_role": 0.232421875,
+                        "control": 0.005035400390625,
+                        "trigger": 0.002960205078125
+                    }
+                ]
+            ],
+            "control": "Il hou AAPk a a.lu PreviousPositive a a a a a a a a a a LatterNeutral Minimal p a"
+        },
+        {
+            "step": 15,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005828857421875,
+                        "sys_role": 0.2265625,
+                        "control": 0.005126953125,
+                        "trigger": 0.002899169921875
+                    }
+                ]
+            ],
+            "control": " Il hou AAPk a a.lu PreviousPositiveches a a a a a a a a a LatterNeutral Minimal p a"
+        },
+        {
+            "step": 16,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005859375,
+                        "sys_role": 0.23046875,
+                        "control": 0.005401611328125,
+                        "trigger": 0.002899169921875
+                    }
+                ]
+            ],
+            "control": "  Il hou AAPk a a.lu PreviousPositiveches a a a a a a a a a senseNeutral Minimal p a"
+        },
+        {
+            "step": 17,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005828857421875,
+                        "sys_role": 0.220703125,
+                        "control": 0.006378173828125,
+                        "trigger": 0.0029296875
+                    }
+                ]
+            ],
+            "control": "   Il houREFIXk a a.lu PreviousPositiveches a a a a a a a a a senseNeutral Minimal p a"
+        },
+        {
+            "step": 18,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00531005859375,
+                        "sys_role": 0.2119140625,
+                        "control": 0.007568359375,
+                        "trigger": 0.0027923583984375
+                    }
+                ]
+            ],
+            "control": "    Il houOtherk a a.lu PreviousPositiveches a a a a a a a a a senseNeutral Minimal p a"
+        },
+        [
+            [
+                {
+                    "goal": 0.005218505859375,
+                    "sys_role": 0.2099609375,
+                    "control": 0.0076904296875,
+                    "trigger": 0.002777099609375
+                }
+            ]
+        ],
+        {
+            "step": 20,
+            "stats": [
+                [
+                    {
+                        "goal": 0.00531005859375,
+                        "sys_role": 0.2080078125,
+                        "control": 0.00775146484375,
+                        "trigger": 0.0028228759765625
+                    }
+                ]
+            ],
+            "control": "       Il houOtherk a a.lu PreviousPositivechesloc a a a a a a a aCONTNeutral Minimal p a"
+        },
+        {
+            "step": 21,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005706787109375,
+                        "sys_role": 0.2158203125,
+                        "control": 0.00732421875,
+                        "trigger": 0.0029296875
+                    }
+                ]
+            ],
+            "control": "        lors houOtherk a a.lu PreviousPositivechesloc a a a a a a a aCONTNeutral Minimal p a"
+        },
+        {
+            "step": 22,
+            "stats": [
+                [
+                    {
+                        "goal": 0.005950927734375,
+                        "sys_role": 0.2158203125,
+                        "control": 0.007110595703125,
+                        "trigger": 0.0030517578125
+                    }
+                ]
+            ],
+            "control": "         lors houconstructork a a.lu PreviousPositivechesloc a a a a a a a aCONTNeutral Minimal p a"
+        }
+    ]
+}

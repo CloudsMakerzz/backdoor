@@ -61,6 +61,6 @@ def get_config():
     
     config.test_case_path = ''
 
-    config.trigger = "I watched 3D movies"
+    config.trigger = "I watched 3D movies|"# 
 
     return config

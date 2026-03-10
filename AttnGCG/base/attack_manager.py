@@ -164,9 +164,9 @@ class AttackPrompt(object):
         toks = encoding.input_ids
 
         # 定义通用分隔符逻辑，用于后续拼接
-        sep1 = ' ' if self.goal else ''
+        sep1 = '' if self.goal else ''
         # sep2 = ' ' if self.trigger else ''
-        sep2 = ' ' if self.trigger and not self.control.startswith(' ') else ''
+        sep2 = '' if self.trigger and not self.control.startswith(' ') else ''
 
         if self.conv_template.name == 'llama-2':
             self.conv_template.messages = []
@@ -203,6 +203,7 @@ class AttackPrompt(object):
             self._loss_slice = slice(self._assistant_role_slice.stop-1, len(toks)-4)
 
         elif self.conv_template.name == 'llama-3':
+            print("llama3")
             self.conv_template.messages = []
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._sys_role_slice = slice(None, len(toks))
@@ -214,7 +215,7 @@ class AttackPrompt(object):
 
             self.conv_template.update_last_message(f"{self.goal}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
-            self._goal_slice = slice(self._user_role_slice.stop+1, max(self._user_role_slice.stop, len(toks)-1))
+            self._goal_slice = slice(self._user_role_slice.stop, max(self._user_role_slice.stop, len(toks)-1))
 
             # 添加trigger
             self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}")
@@ -234,9 +235,67 @@ class AttackPrompt(object):
 
             self.conv_template.update_last_message(f"{self.target}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
-            self._target_slice = slice(self._assistant_role_slice.stop+1, len(toks)-1)
-            self._loss_slice = slice(self._assistant_role_slice.stop, len(toks)-2)
+            self._target_slice = slice(self._assistant_role_slice.stop, len(toks)-1)
+            self._loss_slice = slice(self._assistant_role_slice.stop, len(toks)-1)
+             # 1. 保存初始基准副本
+            # base_conv = self.conv_template.copy()
+            # base_conv.messages = []
+            
+            # # 2. 计算 sys/user 切片
+            # tmp_conv = base_conv.copy()
+            # toks = self.tokenizer(tmp_conv.get_prompt()).input_ids
+            # self._sys_role_slice = slice(None, len(toks))
+            # self._sys_prompt_slice = slice(None, len(toks))
+
+            # tmp_conv.append_message(tmp_conv.roles[0], None)
+            # toks = self.tokenizer(tmp_conv.get_prompt()).input_ids
+            # self._user_role_slice = slice(None, len(toks))
+            # user_end_pos = self._user_role_slice.stop
+
+            # # 3. 计算 goal 切片
+            # tmp_conv = base_conv.copy()
+            # tmp_conv.append_message(tmp_conv.roles[0], None)
+            # tmp_conv.update_last_message(f"{self.goal}")
+            # toks = self.tokenizer(tmp_conv.get_prompt()).input_ids
+            # self._goal_slice = slice(user_end_pos, max(user_end_pos, len(toks)-1))
+            # goal_end_pos = self._goal_slice.stop # 记住 goal 结束位置
+
+            # # ===================== 改动1：计算 Trigger 切片，并保存【纯 Trigger】的结束位置 =====================
+            # tmp_conv = base_conv.copy()
+            # tmp_conv.append_message(tmp_conv.roles[0], None)
+            # # 先算只有 goal+trigger 的长度
+            # tmp_conv.update_last_message(f"{self.goal}{self.trigger}")
+            # toks_trigger = self.tokenizer(tmp_conv.get_prompt()).input_ids
+            # self._trigger_slice = slice(goal_end_pos, len(toks_trigger)-1)
+            # trigger_end_pos = len(toks_trigger)-1 # 🔥 关键：记住 Trigger 真正结束的 Token 位置
+
+            # # ===================== 改动2：计算 Control 切片，从 trigger_end_pos 开始，不包含 Trigger =====================
+            # tmp_conv = base_conv.copy()
+            # tmp_conv.append_message(tmp_conv.roles[0], None)
+            # tmp_conv.update_last_message(f"{self.goal}{self.trigger}{self.control}")
+            # toks = self.tokenizer(tmp_conv.get_prompt()).input_ids
+            # # 🔥 核心：起始位置用 trigger_end_pos，确保只包含 Control
+            # self._control_slice = slice(trigger_end_pos, len(toks)-1) 
+
+            # # 4. 恢复 self.conv_template 为最终状态
+            # self.conv_template = base_conv.copy()
+            # self.conv_template.append_message(self.conv_template.roles[0], None)
+            # self.conv_template.update_last_message(f"{self.goal}{self.trigger}{self.control}")
+            
+            # # 5. 后面的 assistant/target 逻辑保持不变
+            # self.conv_template.append_message(self.conv_template.roles[1], None)
+            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            # self._assistant_role_slice = slice(self._control_slice.stop, len(toks))
+
+            # self.conv_template.update_last_message(f"{self.target}")
+            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            # self._target_slice = slice(self._assistant_role_slice.stop, len(toks)-1)
+            # self._loss_slice = slice(self._assistant_role_slice.stop, len(toks)-1)
+
+            
+
         elif self.conv_template.name == 'one_shot':
+            print("one_shot")
             self.conv_template.messages = []
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._sys_role_slice = slice(None, len(toks))
@@ -365,40 +424,41 @@ class AttackPrompt(object):
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._goal_slice = slice(self._user_role_slice.stop, max(self._user_role_slice.stop, len(toks)-2))
 
-            # trigger control 
-
-            # 添加 trigger
-            self.conv_template.update_last_message(f"{self.goal}{self.trigger}")
+            # trigger control
+            self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._trigger_slice = slice(self._goal_slice.stop, len(toks)-2)
 
-            # 修改control
-            self.conv_template.update_last_message(f"{self.goal}{self.trigger}{self.control}")
+            trigger_prefix = f"{self.goal}{sep1}{self.trigger}{sep2}"
+            self.conv_template.update_last_message(f"{trigger_prefix}")
+            toks_prefix = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            prefix_stop = len(toks_prefix) - 2
+
+            self.conv_template.update_last_message(f"{trigger_prefix}{self.control}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
-            self._control_slice = slice(self._trigger_slice.stop, len(toks)-2)
-
-            # control trigger
-            # # 修改control
-            # self.conv_template.update_last_message(f"{self.goal}{self.control}")
-            # # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}{sep2}{self.control}")
-            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
-            # self._control_slice = slice(self._goal_slice.stop, len(toks)-2)
-            # # self._control_slice = slice(self._trigger_slice.stop, len(toks)-2)
-
-            # # 添加 trigger
-            # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.control}{sep2}{self.trigger}")
-            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
-            # self._trigger_slice = slice(self._goal_slice.stop, len(toks)-2)
-
-
-            # self.conv_template.append_message(self.conv_template.roles[1], None)
-            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
-            # # self._assistant_role_slice = slice(self._control_slice.stop, len(toks))
-            # self._assistant_role_slice = slice(self._trigger_slice.stop, len(toks))
+            self._control_slice = slice(prefix_stop, len(toks)-2)
 
             self.conv_template.append_message(self.conv_template.roles[1], None)
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._assistant_role_slice = slice(self._control_slice.stop, len(toks))
+
+            # control trigger
+            # 修改control
+            # self.conv_template.update_last_message(f"{self.goal}{self.control}")
+            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            # self._control_slice = slice(self._goal_slice.stop, len(toks)-2)
+
+            # # 添加 trigger
+            # self.conv_template.update_last_message(f"{self.goal}{self.control}.{self.trigger}")
+            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            # self._trigger_slice = slice(self._control_slice.stop, len(toks)-2)
+
+
+            # self.conv_template.append_message(self.conv_template.roles[1], None)
+            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            # self._assistant_role_slice = slice(self._trigger_slice.stop, len(toks))
+
+            
 
             self.conv_template.update_last_message(f"{self.target}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
@@ -474,7 +534,27 @@ class AttackPrompt(object):
             raise NotImplementedError("Expect model 'llama', 'vicuna', 'gemma', 'mistral', 'mixtral', 'mpt'")
             
         self.input_ids = torch.tensor(toks[:self._target_slice.stop], device='cpu')
-        
+        # Debug: print decoded content for each prompt slice after ids update.
+        debug_slices = [
+            ("sys_role", self._sys_role_slice),
+            ("sys_prompt", self._sys_prompt_slice),
+            ("user_role", self._user_role_slice),
+            ("goal", self._goal_slice),
+            ("trigger", self._trigger_slice),
+            ("control", self._control_slice),
+            ("assistant_role", self._assistant_role_slice),
+            ("target", self._target_slice),
+            ("loss", self._loss_slice),
+        ]
+        print(f"[update_ids] template={self.conv_template.name}")
+        for name, s in debug_slices:
+            tok_slice = self.input_ids[s]
+            tok_ids = tok_slice.tolist()
+            text = self.tokenizer.decode(tok_slice, skip_special_tokens=False)
+            print(
+                f"[update_ids] {name:14s} slice=({s.start}, {s.stop}) "
+                f"len={len(tok_ids)} ids={tok_ids} text={text!r}"
+            )
         self.conv_template.messages = []
    
     #         pass
@@ -1791,7 +1871,7 @@ class AttentionWrapper(nn.Module):
 class ModelWorker(object):
 
     def __init__(self, model_path, model_kwargs, tokenizer, conv_template, device):
-        max_memory_mapping = {2: "0.5GiB",3:"9GiB"}# 
+        max_memory_mapping = {3:"10GiB" }#,2: "10GiB",3:"10GiB" 
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
             torch_dtype=torch.bfloat16,
@@ -1850,9 +1930,10 @@ def get_workers(params, eval=False):
         tokenizers.append(tokenizer)
 
     print(f"Loaded {len(tokenizers)} tokenizers")
-
+    from fastchat.conversation import get_conv_template
     raw_conv_templates = [
-        get_conversation_template(template)
+        # get_conversation_template(template)
+        get_conv_template(template)
         for template in params.conversation_templates
     ]
     conv_templates = []

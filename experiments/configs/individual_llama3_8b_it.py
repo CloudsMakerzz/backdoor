@@ -7,8 +7,8 @@ def get_config():
     
     config = default_config()
 
-    config.tokenizer_paths=["meta-llama/Meta-Llama-3-8B-Instruct"]
-    config.model_paths=["meta-llama/Meta-Llama-3-8B-Instruct"]
+    config.tokenizer_paths=["/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B"]
+    config.model_paths=["/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/Llama-3.2-3B"]
     config.conversation_templates=['llama-3']
     config.control_init = "a a a a a a a a a a a a a a a a a a a a"
     
