@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+AttnGCG/__init__.py
+AttnGCG.egg-info/PKG-INFO
+AttnGCG.egg-info/SOURCES.txt
+AttnGCG.egg-info/dependency_links.txt
+AttnGCG.egg-info/requires.txt
+AttnGCG.egg-info/top_level.txt
+AttnGCG/attngcg/__init__.py
+AttnGCG/attngcg/attngcg_attack.py
+AttnGCG/base/__init__.py
+AttnGCG/base/attack_manager.py
+experiments/__init__.py
+experiments/main.py
