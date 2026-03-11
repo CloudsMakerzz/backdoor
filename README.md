@@ -109,5 +109,6 @@ This work is partially supported by a gift from Open Philanthropy. We thank the 
 
 
 
-
+conda activate attngcg
+cd experiments/bash_scripts/
 export PYTHONPATH=/home/dataset/2024_zox_llm/code/AttnGCG
